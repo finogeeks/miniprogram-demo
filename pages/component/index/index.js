@@ -13,12 +13,12 @@ Page({
         name: '视图容器',
         open: false,
         pages: ['view', 'scroll-view', 'swiper']
-      }, /*{
+      }, {
         id: 'content',
         name: '基础内容',
         open: false,
         pages: ['text', 'icon', 'progress']
-      }, {
+      }, /* {
         id: 'form',
         name: '表单组件',
         open: false,
