@@ -23,12 +23,12 @@ Page({
         name: '表单组件',
         open: false,
         pages: ['button', 'checkbox', 'form', 'input', 'label', 'picker', 'picker-view', 'radio', 'slider', 'switch', 'textarea']
-      }, {
+      }, */{
         id: 'nav',
         name: '导航',
         open: false,
         pages: ['navigator']
-      }, {
+      },/* {
         id: 'media',
         name: '媒体组件',
         open: false,
@@ -38,12 +38,12 @@ Page({
         name: '画布',
         open: false,
         pages: ['canvas']
-      }, {
+      }, */ {
         id: 'open',
         name: '开放能力',
         open: false,
         pages: ['web-view']
-      }*/
+      }
     ],
     theme: 'light'
   },
