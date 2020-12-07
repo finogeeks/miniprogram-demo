@@ -2,7 +2,8 @@
   "pages": [
     "pages/component/index/index",
     "pages/component/view/view",
-    "pages/API/index/index"
+    "pages/API/index/index",
+    "pages/component/scroll-view/scroll-view"
   ],
   "window": {
     "backgroundTextStyle": "light",
