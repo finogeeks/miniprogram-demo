@@ -32,7 +32,7 @@
     </view>
     <view class="page-section">
       <view class="page-section-title">
-        <text>默认：</text>
+        <text>下拉刷新：</text>
       </view>
       <view class="page-section-spacing">
         <scroll-view
