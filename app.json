@@ -31,7 +31,8 @@
     "pages/API/get-network-type/get-network-type",
     "pages/API/on-network-status-change/on-network-status-change",
     "pages/API/get-system-info/get-system-info",
-    "pages/API/make-phone-call/make-phone-call"
+    "pages/API/make-phone-call/make-phone-call",
+    "pages/API/scan-code/scan-code"
   ],
   "window": {
     "backgroundTextStyle": "light",

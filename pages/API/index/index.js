@@ -79,6 +79,9 @@ Page({
             zh: '打电话',
             url: 'make-phone-call/make-phone-call'
           }, {
+            zh: '扫码',
+            url: 'scan-code/scan-code'
+          },{
             zh: '剪切板',
             url: 'clipboard-data/clipboard-data'
           }, {
