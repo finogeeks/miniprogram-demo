@@ -1,0 +1,2 @@
+/* pages/API/get-system-info/get-system-info.wxss */
+@import "../../common/lib/weui.wxss";

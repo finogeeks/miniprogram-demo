@@ -1,0 +1,8 @@
+/* pages/API/on-network-status-change/on-network-status-change.wxss */
+.page-body-info {
+  height: 100px;
+}
+.page-body-text-network-type {
+  font-size: 40px;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}

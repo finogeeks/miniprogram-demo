@@ -27,7 +27,11 @@
     "pages/component/rich-text/rich-text",
     "pages/component/canvas/canvas",
     "pages/component/image/image",
-    "pages/component/video/video"
+    "pages/component/video/video",
+    "pages/API/get-network-type/get-network-type",
+    "pages/API/on-network-status-change/on-network-status-change",
+    "pages/API/get-system-info/get-system-info",
+    "pages/API/make-phone-call/make-phone-call"
   ],
   "window": {
     "backgroundTextStyle": "light",
