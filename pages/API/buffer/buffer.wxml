@@ -1,0 +1,21 @@
+<!--pages/API/get-network-type/get-network-type.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getNetworkType'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view>这个按钮先调用 wx.base64ToArrayBuffer 将 base64 转换成 ArrayBuffer ， 在调用 wx.arrayBufferToBase64 对象转成 Base64 字符串</view>
+      <view>点击btn 如果result结果是 'CxYh' 说明调用成功</view>
+      <view>result {{result}}</view>
+      <view class="btn-area">
+        <button type="primary" bindtap="testBuffer">test {{result}}</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
+

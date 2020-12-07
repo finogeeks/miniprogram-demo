@@ -6,7 +6,15 @@ Page({
     }
   },
   data: {
-    list: [
+    list: [{
+      id: 'base',
+      name: '基础',
+      open: false,
+      pages: [{
+        zh: 'buffer',
+        url: 'buffer/buffer'
+      },],
+    },
       {
         id: 'page',
         name: '界面',
