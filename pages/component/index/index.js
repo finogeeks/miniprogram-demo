@@ -2,7 +2,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '小程序官方组件展示',
-      path: 'page/component/index'
+      path: 'pages/component/index'
     }
   },
 
@@ -12,8 +12,8 @@ Page({
         id: 'view',
         name: '视图容器',
         open: false,
-        pages: ['view', 'scroll-view', 'swiper']
-      }, {
+        pages: ['view', /*'scroll-view', 'swiper'*/]
+      }, /*{
         id: 'content',
         name: '基础内容',
         open: false,
@@ -43,8 +43,21 @@ Page({
         name: '开放能力',
         open: false,
         pages: ['web-view']
-      }
-    ]
+      }*/
+    ],
+    theme: 'light'
+  },
+
+  onLoad() {
+    this.setData({
+      theme: wx.getSystemInfoSync().theme || 'light'
+    })
+
+    if (wx.onThemeChange) {
+      wx.onThemeChange(({ theme }) => {
+        this.setData({ theme })
+      })
+    }
   },
 
   kindToggle(e) {

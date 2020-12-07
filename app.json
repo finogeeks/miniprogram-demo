@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/component/view/view",
     "pages/component/index/index",
+    "pages/component/view/view",
     "pages/API/index/index"
   ],
   "window": {

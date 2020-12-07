@@ -13,8 +13,8 @@
           </view>
           <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
             <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                <navigator url="pages/component/{{page}}" class="navigator">
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="item">
+                <navigator url="/pages/component/{{page}}/{{page}}" class="navigator">
                   <view class="navigator-text">{{page}}</view>
                   <view class="navigator-arrow"></view>
                 </navigator>
