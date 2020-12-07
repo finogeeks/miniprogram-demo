@@ -10,10 +10,17 @@ Page({
       id: 'base',
       name: '基础',
       open: false,
-      pages: [{
+      pages: [
+      {
         zh: 'buffer',
         url: 'buffer/buffer'
-      },],
+      },
+      {
+        zh: '获取小程序启动参数',
+        url: 'launch-options/launch-options'
+      },
+      
+      ],
     },
       {
         id: 'page',

@@ -1,0 +1,26 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getLaunchOptionsSync'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <view class="page-body-title">启动参数</view>
+        <block>
+          <view wx:for="{{items}}">
+            <text class="page-body-text">{{item}}: {{launchOptions[item]}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="getLaunchOptions">小程序启动参数</button>
+        <button type="primary" bindtap="getEnterOptionsSync">小程序本次启动参数</button>
+        <button bindtap="clear">清空</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
