@@ -33,12 +33,12 @@ Page({
         name: '媒体组件',
         open: false,
         pages: ['image', 'video']
-      }, {
+      }, */{
         id: 'canvas',
         name: '画布',
         open: false,
         pages: ['canvas']
-      }, */ {
+      },  {
         id: 'open',
         name: '开放能力',
         open: false,
