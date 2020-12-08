@@ -22,6 +22,12 @@ Page({
     })
   },
 
+  keepScreenOn() {
+    wx.setKeepScreenOn({
+      keepScreenOn: true
+    })
+  },
+
   _updateScreenBrightness() {
     wx.getScreenBrightness({
       success: (res) => {

@@ -16,6 +16,7 @@
         <slider bindchange="changeBrightness" value="{{screenBrightness}}" min="0" max="1" step="0.1"/>
       </view>
     </view>
+    <button type="primary" bindtap="keepScreenOn">设置常亮</button>
   </view>
 
   <template is="foot" />

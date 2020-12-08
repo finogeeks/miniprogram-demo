@@ -70,16 +70,17 @@ Page({
           },{
             zh: '剪切板',
             url: 'clipboard-data/clipboard-data'
-          }, {
-            zh: '屏幕亮度',
-            url: 'screen-brightness/screen-brightness'
-          }, {
-            zh: '振动',
-            url: 'vibrate/vibrate'
-          }, {
-            zh: '手机联系人',
-            url: 'add-contact/add-contact'
-          }
+          }, 
+          // {
+          //   zh: '屏幕亮度',
+          //   url: 'screen-brightness/screen-brightness'
+          // }, {
+          //   zh: '振动',
+          //   url: 'vibrate/vibrate'
+          // }, {
+          //   zh: '手机联系人',
+          //   url: 'add-contact/add-contact'
+          // }
         ]
       }, {
         id: 'network',
