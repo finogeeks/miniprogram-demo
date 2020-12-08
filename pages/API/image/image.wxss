@@ -1,0 +1,2 @@
+/* pages/API/image/image.wxss */
+@import "../../common/lib/weui.wxss";
