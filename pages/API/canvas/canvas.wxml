@@ -1,0 +1,22 @@
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'createContext'}}"/>
+  <view>本demo使用官方文档中的CanvasContext写法</views>
+  <view>在微信基础库中可以运行</views>
+  <view>在凡泰基础库中不可运行</views>
+  <view class="page-body">
+    <view class="page-section">
+      <canvas class="canvas-element" canvas-id="canvas"></canvas>
+      <scroll-view class="canvas-buttons" scroll-y="true">
+        <button class="canvas-button" bindtap="toTempFilePath">toTempFilePath</button>
+        <block wx:for="{{methods}}" wx:for-item="method">
+          <button class="canvas-button" bindtap="{{method}}" >{{method}}</button>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

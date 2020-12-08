@@ -54,7 +54,8 @@
     "pages/API/animation/animation",
     "pages/API/menu-info/menu-info",
     "pages/API/get-location/get-location",
-    "pages/API/choose-location/choose-location"
+    "pages/API/choose-location/choose-location",
+    "pages/API/canvas/canvas"
   ],
   "window": {
     "backgroundTextStyle": "light",

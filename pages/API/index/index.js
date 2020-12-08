@@ -59,6 +59,10 @@ Page({
             url: 'animation/animation'
           },
           {
+            zh: 'canvas',
+            url: 'canvas/canvas'
+          },
+          {
             zh: '菜单位置信息',
             url: 'menu-info/menu-info'
           },
