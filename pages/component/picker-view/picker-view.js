@@ -19,7 +19,7 @@ Page({
   onShareAppMessage() {
     return {
       title: 'picker-view',
-      path: 'page/component/pages/picker-view/picker-view'
+      path: 'pages/component/picker-view/picker-view'
     }
   },
 
