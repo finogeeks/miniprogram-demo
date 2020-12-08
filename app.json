@@ -14,7 +14,9 @@
     "pages/component/navigator/redirect",
     "pages/component/button/button",
     "pages/component/checkbox/checkbox",
-    "pages/component/label/label"
+    "pages/component/label/label",
+    "pages/component/radio/radio",
+    "pages/component/slider/slider"
   ],
   "window": {
     "backgroundTextStyle": "light",
