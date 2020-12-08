@@ -3,21 +3,17 @@
 
 <view class="container">
   <template is="head" data="{{title: 'getLaunchOptionsSync'}}"/>
-
+  <view>打开这个页面，将小程序切换到后台，期望wx.onAppHide被正确调用</view>
+  <view>打开这个页面，将小程序切换回前台，期望wx.onAppShow被正确调用</view>
   <view class="page-body">
     <view class="page-section">
       <view class="page-body-info">
-        <view class="page-body-title">启动参数</view>
+        <view class="page-body-title">{{type}}</view>
         <block>
           <view wx:for="{{items}}">
             <text class="page-body-text">{{item}}: {{launchOptions[item]}}</text>
           </view>
         </block>
-      </view>
-      <view class="btn-area">
-        <button type="primary" bindtap="getLaunchOptions">小程序启动参数</button>
-        <button type="primary" bindtap="getEnterOptionsSync">小程序本次启动参数</button>
-        <button bindtap="clear">清空</button>
       </view>
     </view> 
   </view>

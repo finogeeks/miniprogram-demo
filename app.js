@@ -32,6 +32,13 @@ App({
         }
       }
     })
+
+    wx.onAppShow((res) => {
+      console.log('onAppShow', res);
+    })
+    wx.onAppHide((res) => {
+      console.log('onAppHide', res);
+    })
   },
   globalData: {
     userInfo: null

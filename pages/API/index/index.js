@@ -19,7 +19,10 @@ Page({
         zh: '获取小程序启动参数',
         url: 'launch-options/launch-options'
       },
-      
+      {
+        zh: '应用级事件',
+        url: 'app-level-event/app-level-event'
+      },
       ],
     },
       {
