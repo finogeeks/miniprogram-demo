@@ -3,9 +3,9 @@
 
 <view class="container">
   <template is="head" data="{{title: 'createContext'}}"/>
-  <view>本demo使用官方文档中的CanvasContext写法</views>
-  <view>在微信基础库中可以运行</views>
-  <view>在凡泰基础库中不可运行</views>
+  <view>本demo使用官方文档中的CanvasContext写法</view>
+  <view>在微信基础库中可以运行</view>
+  <view>在凡泰基础库中不可运行</view>
   <view class="page-body">
     <view class="page-section">
       <canvas class="canvas-element" canvas-id="canvas"></canvas>
