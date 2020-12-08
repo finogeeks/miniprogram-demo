@@ -27,6 +27,10 @@ Page({
         zh: '定时器',
         url: 'timmer/timmer'
       },
+      {
+        zh: '路由',
+        url: 'router/router'
+      }
       ],
     },
       {

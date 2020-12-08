@@ -36,7 +36,9 @@
     "pages/API/clipboard-data/clipboard-data",
     "pages/API/screen-brightness/screen-brightness",
     "pages/API/vibrate/vibrate",
-    "pages/API/add-contact/add-contact"
+    "pages/API/add-contact/add-contact",
+    "pages/API/buffer/buffer",
+    "pages/API/router/router"
   ],
   "window": {
     "backgroundTextStyle": "light",

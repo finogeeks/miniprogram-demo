@@ -1,0 +1,22 @@
+<!--pages/API/get-network-type/get-network-type.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'router'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="btn-area">
+        <button type="primary" bindtap="switchTab">switchTab</button>
+        <button type="primary" bindtap="reLaunch">reLaunch</button>
+        <button type="primary" bindtap="redirectTo">redirectTo</button>
+        <button type="primary" bindtap="navigateTo">navigateTo</button>
+        <button type="primary" bindtap="navigateBack">navigateBack</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
+
