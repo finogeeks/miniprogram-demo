@@ -50,7 +50,9 @@
     "pages/API/load-font-face/load-font-face",
     "pages/API/video/video",
     "pages/API/audio/audio",
-    "pages/API/storage/storage"
+    "pages/API/storage/storage",
+    "pages/API/animation/animation",
+    "pages/API/menu-info/menu-info"
   ],
   "window": {
     "backgroundTextStyle": "light",

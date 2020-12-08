@@ -2,18 +2,21 @@
 <import src="../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'getLaunchOptionsSync'}}"/>
-  <view>打开这个页面，将小程序切换到后台，期望wx.onAppHide被正确调用</view>
-  <view>打开这个页面，将小程序切换回前台，期望wx.onAppShow被正确调用</view>
+  <template is="head" data="{{title: 'getMenuButtonBoundingClientRect'}}"/>
+
   <view class="page-body">
     <view class="page-section">
       <view class="page-body-info">
-        <view class="page-body-title">{{type}}</view>
+        <view class="page-body-title">菜单按钮（右上角胶囊按钮）的布局位置信息</view>
         <block>
           <view wx:for="{{items}}">
             <text class="page-body-text">{{item}}: {{launchOptions[item]}}</text>
           </view>
         </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="getLaunchOptions">菜单位置</button>
+        <button bindtap="clear">清空</button>
       </view>
     </view> 
   </view>

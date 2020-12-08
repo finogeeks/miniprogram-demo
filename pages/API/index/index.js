@@ -54,6 +54,14 @@ Page({
             zh: '页面滚动',
             url: 'page-scroll/page-scroll'
           },
+          {
+            zh: '动画',
+            url: 'animation/animation'
+          },
+          {
+            zh: '菜单位置信息',
+            url: 'menu-info/menu-info'
+          },
         ]
       }, {
         id: 'device',
