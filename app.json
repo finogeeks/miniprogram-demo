@@ -1,4 +1,5 @@
 {
+  "debug": true,
   "pages": [
     "pages/component/index/index",
     "pages/component/view/view",
@@ -16,7 +17,8 @@
     "pages/component/checkbox/checkbox",
     "pages/component/label/label",
     "pages/component/radio/radio",
-    "pages/component/slider/slider"
+    "pages/component/slider/slider",
+    "pages/component/switch/switch"
   ],
   "window": {
     "backgroundTextStyle": "light",
