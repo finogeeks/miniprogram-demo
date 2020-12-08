@@ -32,7 +32,11 @@
     "pages/API/on-network-status-change/on-network-status-change",
     "pages/API/get-system-info/get-system-info",
     "pages/API/make-phone-call/make-phone-call",
-    "pages/API/scan-code/scan-code"
+    "pages/API/scan-code/scan-code",
+    "pages/API/clipboard-data/clipboard-data",
+    "pages/API/screen-brightness/screen-brightness",
+    "pages/API/vibrate/vibrate",
+    "pages/API/add-contact/add-contact"
   ],
   "window": {
     "backgroundTextStyle": "light",
