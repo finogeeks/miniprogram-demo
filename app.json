@@ -23,7 +23,8 @@
     "pages/component/picker-view/picker-view",
     "pages/component/input/input",
     "pages/component/textarea/textarea",
-    "pages/component/form/form"
+    "pages/component/form/form",
+    "pages/component/rich-text/rich-text"
   ],
   "window": {
     "backgroundTextStyle": "light",

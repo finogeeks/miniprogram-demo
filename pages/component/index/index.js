@@ -17,7 +17,7 @@ Page({
         id: 'content',
         name: '基础内容',
         open: false,
-        pages: ['text', 'icon', 'progress']
+        pages: ['text', 'icon', 'rich-text', 'progress']
       }, {
         id: 'form',
         name: '表单组件',
