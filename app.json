@@ -41,7 +41,8 @@
     "pages/API/launch-options/launch-options",
     "pages/API/router/router",
     "pages/API/timmer/timmer",
-    "pages/API/intereaction/intereaction"
+    "pages/API/intereaction/intereaction",
+    "pages/API/navigationBar/navigationBar"
   ],
   "window": {
     "backgroundTextStyle": "light",

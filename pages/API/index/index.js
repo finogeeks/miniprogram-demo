@@ -42,6 +42,10 @@ Page({
             zh: '交互',
             url: 'intereaction/intereaction'
           },
+          {
+            zh: '导航栏',
+            url: 'navigationBar/navigationBar'
+          },
         ]
       }, {
         id: 'device',
