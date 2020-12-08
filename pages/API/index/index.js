@@ -46,6 +46,10 @@ Page({
             zh: '导航栏',
             url: 'navigationBar/navigationBar'
           },
+          {
+            zh: '设置TabBar',
+            url: '@set-tab-bar'
+          },
         ]
       }, {
         id: 'device',
