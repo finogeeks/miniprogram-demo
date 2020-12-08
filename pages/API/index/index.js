@@ -50,6 +50,10 @@ Page({
             zh: '设置TabBar',
             url: '@set-tab-bar'
           },
+          {
+            zh: '页面滚动',
+            url: 'page-scroll/page-scroll'
+          },
         ]
       }, {
         id: 'device',

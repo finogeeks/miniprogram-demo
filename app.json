@@ -42,7 +42,8 @@
     "pages/API/router/router",
     "pages/API/timmer/timmer",
     "pages/API/intereaction/intereaction",
-    "pages/API/navigationBar/navigationBar"
+    "pages/API/navigationBar/navigationBar",
+    "pages/API/page-scroll/page-scroll"
   ],
   "window": {
     "backgroundTextStyle": "light",
