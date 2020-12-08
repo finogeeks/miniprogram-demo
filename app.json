@@ -11,7 +11,8 @@
     "pages/component/web-view/web-view",
     "pages/component/navigator/navigator",
     "pages/component/navigator/navigate",
-    "pages/component/navigator/redirect"
+    "pages/component/navigator/redirect",
+    "pages/component/button/button"
   ],
   "window": {
     "backgroundTextStyle": "light",
