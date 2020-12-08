@@ -43,7 +43,13 @@
     "pages/API/timmer/timmer",
     "pages/API/intereaction/intereaction",
     "pages/API/navigationBar/navigationBar",
-    "pages/API/page-scroll/page-scroll"
+    "pages/API/page-scroll/page-scroll",
+    "pages/API/request/request",
+    "pages/API/web-socket/web-socket",
+    "pages/API/image/image",
+    "pages/API/load-font-face/load-font-face",
+    "pages/API/video/video",
+    "pages/API/audio/audio"
   ],
   "window": {
     "backgroundTextStyle": "light",
