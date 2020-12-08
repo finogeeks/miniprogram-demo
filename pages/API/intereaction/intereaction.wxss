@@ -1,0 +1,8 @@
+/* pages/API/get-network-type/get-network-type.wxss */
+.page-body-info {
+  height: 100px;
+}
+.page-body-text-network-type {
+  font-size: 40px;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}

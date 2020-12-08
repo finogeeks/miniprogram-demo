@@ -38,7 +38,10 @@
     "pages/API/vibrate/vibrate",
     "pages/API/add-contact/add-contact",
     "pages/API/buffer/buffer",
-    "pages/API/router/router"
+    "pages/API/launch-options/launch-options",
+    "pages/API/router/router",
+    "pages/API/timmer/timmer",
+    "pages/API/intereaction/intereaction"
   ],
   "window": {
     "backgroundTextStyle": "light",

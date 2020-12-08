@@ -39,45 +39,9 @@ Page({
         open: false,
         pages: [
           {
-            zh: '设置界面标题',
-            url: 'set-navigation-bar-title/set-navigation-bar-title'
-          }, {
-            zh: '标题栏加载动画',
-            url: 'navigation-bar-loading/navigation-bar-loading'
-          }, {
-            zh: '设置TabBar',
-            url: '@set-tab-bar'
-          }, {
-            zh: '页面跳转',
-            url: 'navigator/navigator'
-          }, {
-            zh: '下拉刷新',
-            url: 'pull-down-refresh/pull-down-refresh'
-          }, {
-            zh: '创建动画',
-            url: 'animation/animation'
-          }, {
-            zh: '创建绘画',
-            url: 'canvas/canvas'
-          }, {
-            zh: '显示操作菜单',
-            url: 'action-sheet/action-sheet'
-          }, {
-            zh: '显示模态弹窗',
-            url: 'modal/modal'
-          }, {
-            zh: '页面滚动',
-            url: 'page-scroll/page-scroll'
-          }, {
-            zh: '显示消息提示框',
-            url: 'toast/toast'
-          }, {
-            zh: '获取WXML节点信息',
-            url: 'get-wxml-node-info/get-wxml-node-info'
-          }, {
-            zh: 'WXML节点布局相交状态',
-            url: 'intersection-observer/intersection-observer'
-          }
+            zh: '交互',
+            url: 'intereaction/intereaction'
+          },
         ]
       }, {
         id: 'device',

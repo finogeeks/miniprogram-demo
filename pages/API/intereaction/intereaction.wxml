@@ -1,0 +1,25 @@
+<!--pages/API/get-network-type/get-network-type.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'router'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="btn-area">
+        <button type="primary" bindtap="showToast">showToast</button>
+        <button type="primary" bindtap="hideToast">hideToast</button>
+
+        <button type="primary" bindtap="showLoading">showLoading</button>
+        <button type="primary" bindtap="hideLoading">hideLoading</button>
+
+        <button type="primary" bindtap="showModal">showModal</button>
+        <button type="primary" bindtap="showActionSheet">showActionSheet</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
+
