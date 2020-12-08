@@ -3,7 +3,6 @@
   "pages": [
     "pages/component/index/index",
     "pages/component/view/view",
-    "pages/API/index/index",
     "pages/component/scroll-view/scroll-view",
     "pages/component/swiper/swiper",
     "pages/component/text/text",
@@ -28,6 +27,7 @@
     "pages/component/canvas/canvas",
     "pages/component/image/image",
     "pages/component/video/video",
+    "pages/API/index/index",
     "pages/API/get-network-type/get-network-type",
     "pages/API/on-network-status-change/on-network-status-change",
     "pages/API/get-system-info/get-system-info",
@@ -52,7 +52,9 @@
     "pages/API/audio/audio",
     "pages/API/storage/storage",
     "pages/API/animation/animation",
-    "pages/API/menu-info/menu-info"
+    "pages/API/menu-info/menu-info",
+    "pages/API/get-location/get-location",
+    "pages/API/choose-location/choose-location"
   ],
   "window": {
     "backgroundTextStyle": "light",
