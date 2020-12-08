@@ -21,7 +21,9 @@
     "pages/component/switch/switch",
     "pages/component/picker/picker",
     "pages/component/picker-view/picker-view",
-    "pages/component/input/input"
+    "pages/component/input/input",
+    "pages/component/textarea/textarea",
+    "pages/component/form/form"
   ],
   "window": {
     "backgroundTextStyle": "light",
