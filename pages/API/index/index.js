@@ -23,6 +23,10 @@ Page({
         zh: '应用级事件',
         url: 'app-level-event/app-level-event'
       },
+      {
+        zh: '定时器',
+        url: 'timmer/timmer'
+      },
       ],
     },
       {

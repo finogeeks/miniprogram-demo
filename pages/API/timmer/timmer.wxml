@@ -1,0 +1,24 @@
+<!--pages/API/get-network-type/get-network-type.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'getNetworkType'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view>setInterval 2s 一次随机改变result</view>
+      <view>setTimeout 2s 后随机改变result</view>
+      <view>result: {{result}}</view>
+      <view class="btn-area">
+        <button type="primary" bindtap="handleClearInterval">clearInterval</button>
+        <button type="primary" bindtap="handleClearTimeout">clearTimeout</button>
+        <button type="primary" bindtap="handleSetInterval">setInterval</button>
+        <button type="primary" bindtap="handleSetTimeout">setTimeout</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
+
