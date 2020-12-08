@@ -12,7 +12,8 @@
     "pages/component/navigator/navigator",
     "pages/component/navigator/navigate",
     "pages/component/navigator/redirect",
-    "pages/component/button/button"
+    "pages/component/button/button",
+    "pages/component/checkbox/checkbox"
   ],
   "window": {
     "backgroundTextStyle": "light",
