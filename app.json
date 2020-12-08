@@ -18,7 +18,8 @@
     "pages/component/label/label",
     "pages/component/radio/radio",
     "pages/component/slider/slider",
-    "pages/component/switch/switch"
+    "pages/component/switch/switch",
+    "pages/component/picker/picker"
   ],
   "window": {
     "backgroundTextStyle": "light",
