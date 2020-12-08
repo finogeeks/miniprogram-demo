@@ -20,7 +20,8 @@
     "pages/component/slider/slider",
     "pages/component/switch/switch",
     "pages/component/picker/picker",
-    "pages/component/picker-view/picker-view"
+    "pages/component/picker-view/picker-view",
+    "pages/component/input/input"
   ],
   "window": {
     "backgroundTextStyle": "light",
