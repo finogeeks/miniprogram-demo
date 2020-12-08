@@ -13,7 +13,8 @@
     "pages/component/navigator/navigate",
     "pages/component/navigator/redirect",
     "pages/component/button/button",
-    "pages/component/checkbox/checkbox"
+    "pages/component/checkbox/checkbox",
+    "pages/component/label/label"
   ],
   "window": {
     "backgroundTextStyle": "light",
