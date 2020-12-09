@@ -7,7 +7,7 @@
 
   <view class="page-body">
     <view class="page-section">
-      <block wx:if="{{recording === false && playing === false && hasRecord === false}}">
+      <block wx:if="{{recording === false}}">
         <view class="page-body-time">
           <text class="time-big">{{formatedRecordTime}}</text>
         </view>

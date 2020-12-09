@@ -20,10 +20,14 @@ Page({
     })
     wx.startRecord({
       success (res) {
+        console.log(res);
         const tempFilePath = res.tempFilePath
         this.setData({
           filePath: tempFilePath,
         })
+      },
+      fail(res) {
+        console.log(res);
       }
     })
   },
