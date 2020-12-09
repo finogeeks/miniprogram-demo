@@ -1,0 +1,45 @@
+<!--pages/API/storage/storage.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'get/set/clearStorage'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">key</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入key" name="key" value="{{key}}" bindinput="keyChange"></input>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">value</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" type="text" placeholder="请输入value" name="data" value="{{data}}" bindinput="dataChange"></input>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="setStorageSync">同步存储数据</button>
+        <button type="primary" bindtap="getStorageInfoSync">同步读取全部数据</button>
+        <button type="primary" bindtap="getStorageSync">同步读取数据</button>
+        <button bindtap="clearStorageSync">同步清理全部数据</button>
+        <button bindtap="removeStorageSync">同步清理指定key数据</button>
+        <button type="primary" bindtap="setStorage">异步存储数据</button>
+        <button type="primary" bindtap="getStorageInfo">异步读取全部数据</button>
+        <button type="primary" bindtap="getStorage">异步读取数据</button>
+        <button bindtap="clearStorage">异步清理全部数据</button>
+        <button bindtap="removeStorage">异步清理指定key数据</button>
+        <button bindtap="clearData">清空界面数据</button>
+      </view>
+    </view>
+  </view>
+  <template is="foot" />
+</view>
+

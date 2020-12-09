@@ -49,7 +49,8 @@
     "pages/API/image/image",
     "pages/API/load-font-face/load-font-face",
     "pages/API/video/video",
-    "pages/API/audio/audio"
+    "pages/API/audio/audio",
+    "pages/API/storage/storage"
   ],
   "window": {
     "backgroundTextStyle": "light",
