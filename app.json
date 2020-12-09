@@ -57,7 +57,8 @@
     "pages/API/choose-location/choose-location",
     "pages/API/canvas/canvas",
     "pages/API/get-wxml-node-info/get-wxml-node-info",
-    "pages/API/intersection-observer/intersection-observer"
+    "pages/API/intersection-observer/intersection-observer",
+    "pages/API/download-file/download-file"
   ],
   "window": {
     "backgroundTextStyle": "light",
