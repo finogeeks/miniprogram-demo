@@ -18,11 +18,12 @@ Page({
     this.setData({
       recording: true,
     })
+    const that = this;
     wx.startRecord({
       success (res) {
         console.log(res);
         const tempFilePath = res.tempFilePath
-        this.setData({
+        that.setData({
           filePath: tempFilePath,
         })
       },
