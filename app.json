@@ -58,7 +58,8 @@
     "pages/API/canvas/canvas",
     "pages/API/get-wxml-node-info/get-wxml-node-info",
     "pages/API/intersection-observer/intersection-observer",
-    "pages/API/download-file/download-file"
+    "pages/API/download-file/download-file",
+    "pages/API/upload-file/upload-file"
   ],
   "window": {
     "backgroundTextStyle": "light",
