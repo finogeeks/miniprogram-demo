@@ -34,9 +34,9 @@
       </block>
 
       <block wx:if="{{filePath && recording === false}}">
-        <button type="primary" bindtap="audioPlay">播放</button>
-        <button type="primary" bindtap="audioPause">暂停</button>
-        <button type="primary" bindtap="audioStop">结束</button>
+        <button type="primary" bindtap="playVoice">播放</button>
+        <button type="primary" bindtap="pauseVoice">暂停</button>
+        <button type="primary" bindtap="stopVoice">结束</button>
       </block>
 
       <!-- <block wx:if="{{hasRecord === true && playing === true}}">
