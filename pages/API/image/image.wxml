@@ -68,6 +68,10 @@
           </view>
         </view>
 
+        <view>
+          <button type="primary" bindtap="showImageInfo">展示第一张图片信息</button>
+          <button type="primary" bindtap="saveImage">保存第一张图片</button>
+        </view>
       </view>
     </form>
   </view>

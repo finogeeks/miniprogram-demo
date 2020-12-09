@@ -37,6 +37,7 @@ Page({
       count: this.data.count[this.data.countIndex],
       success(res) {
         console.log(res)
+       
         that.setData({
           imageList: res.tempFilePaths
         })
@@ -50,5 +51,36 @@ Page({
       current,
       urls: this.data.imageList
     })
-  }
+  },
+  // 展示第一张图片信息
+  showImageInfo() {
+    if (!this.data.imageList.length) {
+      return;
+    }
+    // 获取第一张图片信息
+    wx.getImageInfo({
+      src: this.data.imageList[0],
+      success (res) {
+        wx.showModal({
+          title: `高：${res.height}, 宽：${res.width}`,
+        })
+        console.log(res.width)
+        console.log(res.height)
+      }
+    })
+  },
+  // 长按保存第一张图片
+  saveImage() {
+    if (!this.data.imageList.length) {
+      return;
+    }
+    wx.saveImageToPhotosAlbum({
+      filePath: this.data.imageList[0],
+      success(res) { 
+        wx.showToast({
+          title: '保存成功',
+        })
+      }
+    })
+  },
 })
