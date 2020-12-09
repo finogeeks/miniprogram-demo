@@ -51,7 +51,6 @@ Page({
   },
   stopVoice() {
     wx.stopVoice({
-      filePath: this.data.filePath,
       success: (res) => {
         console.log('播放成功', res);
       },
