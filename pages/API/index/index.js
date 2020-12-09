@@ -66,6 +66,14 @@ Page({
             zh: '菜单位置信息',
             url: 'menu-info/menu-info'
           },
+          {
+            zh: '获取WXML节点信息',
+            url: 'get-wxml-node-info/get-wxml-node-info'
+          },
+          {
+            zh: 'WXML节点布局相交状态',
+            url: 'intersection-observer/intersection-observer'
+          },
         ]
       }, {
         id: 'device',
