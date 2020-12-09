@@ -28,12 +28,12 @@ Page({
         name: '导航',
         open: false,
         pages: ['navigator']
-      },/* {
+      }, {
         id: 'media',
         name: '媒体组件',
         open: false,
         pages: ['image', 'video']
-      }, */{
+      }, {
         id: 'canvas',
         name: '画布',
         open: false,
