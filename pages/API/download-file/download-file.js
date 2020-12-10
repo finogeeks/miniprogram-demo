@@ -4,7 +4,7 @@ Page({
     const self = this
 
     wx.downloadFile({
-      url: 'https://p2.ssl.qhimgs1.com/t016f54160c5c81c652.jpg', // 文件资源
+      url: 'https://nextcloud.finogeeks.club/s/GF2zYNNnqTQ4gXG/preview', // 文件资源
       success: res => {
         console.log('downloadFile success, res is', res)
         self.setData({
