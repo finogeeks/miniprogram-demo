@@ -5,6 +5,7 @@
 <view class="container">
   <template is="head" data="{{title: 'vibrate/Long/Short'}}"/>
 
+  <view class="tips">目前仅iOS支持，安卓暂时不支持</view>
   <view class="page-body">
     <view class="page-section">
       <view class="btn-area">

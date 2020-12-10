@@ -5,6 +5,7 @@
 <view class="container">
   <template is="head" data="{{title: 'addPhoneContact'}}"/>
 
+  <view class="tips">目前仅iOS支持，安卓暂时不支持</view>
   <view class="page-body">
     <form bindsubmit="submit">
       <view class="page-section">

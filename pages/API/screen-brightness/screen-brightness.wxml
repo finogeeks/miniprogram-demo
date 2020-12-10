@@ -5,6 +5,7 @@
 <view class="container">
   <template is="head" data="{{title: 'get/set/ScreenBrightness'}}"/>
 
+  <view class="tips">目前仅iOS支持，安卓暂时不支持</view>
   <view class="page-body">
     <view class="page-body-info">
       <view class="page-body-title">当前屏幕亮度</view>
