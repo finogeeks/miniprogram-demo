@@ -2,5 +2,5 @@
 
 .picker{
   padding: 10px 13px;
-  background-color: #FFFFFF;
+  background-color: var(--weui-BG-5);
 }
