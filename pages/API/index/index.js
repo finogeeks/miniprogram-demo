@@ -140,13 +140,15 @@ Page({
           }, {
             zh: '音频',
             url: 'audio/audio'
-          }, {
-            zh: '录音',
-            url: 'voice/voice'
-          }, {
-            zh: '视频',
-            url: 'video/video'
-          }, {
+          },
+          // {
+          //   zh: '录音',
+          //   url: 'voice/voice'
+          // }, {
+          //   zh: '视频',
+          //   url: 'video/video'
+          // },
+          {
             zh: '动态加载字体',
             url: 'load-font-face/load-font-face'
           }

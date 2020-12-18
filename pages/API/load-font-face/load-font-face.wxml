@@ -4,7 +4,7 @@
 
 <view class="container">
   <template is="head" data="{{title: 'loadFontFace'}}"/>
-
+  <view>目前仅ios支持，安卓不支持</view>
   <view class="page-body">
     <view class="page-section">
       <view class="page-body-info display-area {{ loaded ? 'font-loaded' : '' }}">
