@@ -8,7 +8,7 @@
     <view class="page-section tc">
       <video 
         id="myVideo" 
-        src="https://mp.finogeeks.com/mp4/MOP%E5%AE%98%E7%BD%91%E8%A7%86%E9%A2%91.mp4" 
+        src="https://public-1251849568.cos.ap-guangzhou.myqcloud.com/homeSite/video/FinClipHome.mp4" 
         binderror="videoErrorCallback" 
         controls
       ></video>
