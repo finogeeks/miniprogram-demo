@@ -5,7 +5,6 @@
   <template is="head" data="{{title: 'canvas'}}"/>
 
   <view class="page-body">
-    <button type="primary" bindtap="onTap">页面主操作 Normal</button>
     <view class="page-section page-section-gap">
       <view class="page-section-title">绘制</view>
       <view class="body-view">
