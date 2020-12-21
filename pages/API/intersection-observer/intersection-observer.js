@@ -16,7 +16,7 @@ Page({
       .observe('.ball', (res) => {
         console.log(res)
         this.setData({
-          appear: res.intersectionRatio > 0
+          appear: !this.data.appear
         })
       })
   },
