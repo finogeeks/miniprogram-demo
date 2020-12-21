@@ -222,12 +222,12 @@ example.setGlobalAlpha = function (context) {
   })
 }
 
-// example.setShadow = function (context) {
-//   context.beginPath()
-//   context.setShadow(10, 10, 10, 'rgba(0, 0, 0, 199)')
-//   context.rect(10, 10, 100, 100)
-//   context.fill()
-// }
+example.setShadow = function (context) {
+  context.beginPath()
+  context.setShadow(10, 10, 10, 'rgba(0, 0, 0, 199)')
+  context.rect(10, 10, 100, 100)
+  context.fill()
+}
 
 example.setFontSize = function (context) {
   [10, 20, 30, 40].forEach(function (item, index) {
