@@ -1,5 +1,3 @@
-# README
-
 ## FinClip小程序是什么？
 ### 平台介绍
 
@@ -43,4 +41,5 @@
 
 ## 与我们联系
 如想进入FinClip小程序技术群交流探讨，可添加小助手微信入群。
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/5377457/1608263649295-c93f46f0-3839-4216-bede-ded776e4fb03.png#align=left&display=inline&height=198&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=573&size=163515&status=done&style=none&width=186)
+
+<img src="https://cdn.nlark.com/yuque/0/2020/png/5377457/1608263649295-c93f46f0-3839-4216-bede-ded776e4fb03.png#align=left&display=inline&height=198&margin=%5Bobject%20Object%5D&name=image.png&originHeight=611&originWidth=573&size=163515&status=done&style=none&width=186" width="200">
