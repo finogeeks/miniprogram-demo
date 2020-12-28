@@ -35,6 +35,7 @@
     "pages/API/scan-code/scan-code",
     "pages/API/clipboard-data/clipboard-data",
     "pages/API/screen-brightness/screen-brightness",
+    "pages/API/on-user-screen-capture/on-user-screen-capture",
     "pages/API/vibrate/vibrate",
     "pages/API/add-contact/add-contact",
     "pages/API/buffer/buffer",

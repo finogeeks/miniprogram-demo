@@ -98,10 +98,12 @@ Page({
           },{
             zh: '剪切板',
             url: 'clipboard-data/clipboard-data'
-          }, 
-          {
+          }, {
             zh: '屏幕亮度',
             url: 'screen-brightness/screen-brightness'
+          }, {
+            zh: '获取用户截屏事件',
+            url: 'on-user-screen-capture/on-user-screen-capture'
           }, {
             zh: '振动',
             url: 'vibrate/vibrate'

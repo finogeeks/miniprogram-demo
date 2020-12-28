@@ -1,0 +1,15 @@
+<!--pages/API/screen-brightness/screen-brightness.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'on/of/UserCaptureScreen'}}"/>
+
+  <view class="page-body">
+    <button type="primary" bindtap="onUserCaptureScreen">开始监听用户屏幕截图事件</button>
+    <button type="primary" bindtap="offUserScreenCapture">取消监听用户屏幕截图事件</button>
+  </view>
+
+  <template is="foot" />
+</view>
+
