@@ -2,7 +2,7 @@
 <view wx:else class="index">
   <view class="index-hd">
     <image class="index-logo" src="resources/kind/logo.png"></image>
-    <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见 <navigator url="pages/doc-web-view/doc-web-view" class="weui-agree__link">小程序开发文档</navigator>。</view>
+    <view class="index-desc">以下将演示小程序接口能力，具体属性参数详见 <navigator url="/pages/component/doc-web-view/doc-web-view" class="weui-agree__link">小程序开发文档</navigator>。</view>
   </view>
   <view class="index-bd">
     <view class="kind-list">

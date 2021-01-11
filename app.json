@@ -27,6 +27,7 @@
     "pages/component/canvas/canvas",
     "pages/component/image/image",
     "pages/component/video/video",
+    "pages/component/doc-web-view/doc-web-view",
     "pages/API/index/index",
     "pages/API/get-network-type/get-network-type",
     "pages/API/on-network-status-change/on-network-status-change",
