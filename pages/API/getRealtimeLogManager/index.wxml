@@ -1,0 +1,8 @@
+<!--pages/index/index.wxml-->
+<view>
+
+  <button bindtap="startLog">start log</button>
+
+  <!-- <button open-type="feedback">feedback</button> -->
+
+</view>

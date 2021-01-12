@@ -153,6 +153,14 @@ Page({
           {
             zh: '动态加载字体',
             url: 'load-font-face/load-font-face'
+          },
+          {
+            zh: 'previewMedia',
+            url: 'previewMedia/index'
+          },
+          {
+            zh: 'getSelectedTextRange',
+            url: 'getSelectedTextRange/index'
           }
         ]
       }, {
@@ -171,10 +179,20 @@ Page({
       }, {
         id: 'storage',
         name: '数据',
-        pages: [{
-          zh: '本地存储',
-          url: 'storage/storage'
-        }],
+        pages: [
+          {
+            zh: '本地存储',
+            url: 'storage/storage'
+          },
+          // {
+          //   zh: 'LogManager',
+          //   url: 'LogManager/index'
+          // },
+          // {
+          //   zh: 'getRealtimeLogManager',
+          //   url: 'getRealtimeLogManager/index'
+          // }
+        ],
       }
     ],
     isSetTabBarPage: false,

@@ -1,0 +1,9 @@
+.button {
+  margin-bottom: 20rpx;
+}
+.navigator-hover button{
+  background-color: #DEDEDE;
+}
+.other-navigator-hover button{
+  background-color: #DEDEDE;
+}

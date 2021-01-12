@@ -1,0 +1,26 @@
+<view class="my-box">
+      <button bindtap="getSelectedTextRange">直接触发getSelectedTextRange</button>
+
+      <view>普通input↓</view>
+
+      <input 
+            type="text" 
+            class="test-input"
+            bindfocus="settimeoutgetSelectedTextRange"
+            placeholder="focus2秒后触发getSelectedTextRange"
+            value="focus2秒后触发getSelectedTextRange"
+            ></input>
+
+
+      <view>带selection-start selection-end  input↓</view>
+
+      <input 
+            type="text" 
+            class="test-input"
+            bindfocus="settimeoutgetSelectedTextRange"
+            placeholder="focus2秒后触发getSelectedTextRange"
+            value="focus2秒后触发getSelectedTextRange"
+            selection-start="4"
+            selection-end="10"
+            ></input>
+</view>

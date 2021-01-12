@@ -1,0 +1,6 @@
+
+
+<view class="my-box">
+  <button bindtap="previewMedia">previewMedia</button>
+  <button bindtap="previewMedialocal">本地图片previewMedia</button>
+</view>
