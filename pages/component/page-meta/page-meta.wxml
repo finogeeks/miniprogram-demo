@@ -6,7 +6,7 @@
   background-color='{{bgColor}}'
   background-color-top="{{bgColorTop}}"
   background-color-bottom="{{bgColorBottom}}"
-  scroll-top="{{scrollTop}}}"
+  scroll-top="{{scrollTop}}"
   scrollDuration="{{duration}}"
   root-font-size='{{fontSize}}'
   page-style='{{pageStyle}}'
@@ -22,7 +22,6 @@
     color-animation-timing-func='{{func}}'
   ></navigation-bar>
 </page-meta>
-
 <view class="container">
   <template is="head" data="{{title: 'page-meta'}}"/>
   <view class="page-body">

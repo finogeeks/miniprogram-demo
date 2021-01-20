@@ -9,9 +9,9 @@ Page({
     bgColor: '#ffffff',
     bgColorTop: '#333333',
     bgColorBottom: '#999999',
-    scrollTop: '200px',
+    scrollTop: '100rpx',
     duration: 200,
-    fontSize: '20px',
+    fontSize: '30px',
     pageStyle: 'color: red',
     navigationTitle: '初始化navigation-bar文档',
     navigationBgColor: '#000000',
@@ -34,6 +34,7 @@ Page({
       bgColorBottom: '#333333',
       fontSize: '30px',
       pageStyle: 'color: blue',
+      scrollTop: '500rpx'
 
     })
   },
