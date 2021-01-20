@@ -1,0 +1,39 @@
+<!--pages/component/page-meta/page-meta.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<page-meta  
+  background-color='{{bgColor}}'
+  background-color-top="{{bgColorTop}}"
+  background-color-bottom="{{bgColorBottom}}"
+  scroll-top="{{scrollTop}}}"
+  scrollDuration="{{duration}}"
+  root-font-size='{{fontSize}}'
+  page-style='{{pageStyle}}'
+  bindresize='onResize'
+  bindscroll="onScroll"
+>
+  <navigation-bar
+    title='{{navigationTitle}}'
+    background-color='{{navigationBgColor}}'
+    front-color='{{frontColor}}'
+    loading='{{isLoadding}}'
+    color-animation-duration='{{duration}}'
+    color-animation-timing-func='{{func}}'
+  ></navigation-bar>
+</page-meta>
+
+<view class="container">
+  <template is="head" data="{{title: 'page-meta'}}"/>
+  <view class="page-body">
+    <button type="primary" bindtap="updatePageMeta">更新page-meta数据</button>
+    <button type="primary" bindtap="updateNavigationBar">更新navigation-bar数据</button>
+
+
+    <view class="place-holder-box">
+        占位符，为了测试滑动
+    </view>
+  </view>
+  
+  <template is="foot" />
+</view>

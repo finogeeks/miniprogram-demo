@@ -63,7 +63,8 @@
     "pages/API/intersection-observer/intersection-observer",
     "pages/API/download-file/download-file",
     "pages/API/upload-file/upload-file",
-    "pages/API/voice/voice"
+    "pages/API/voice/voice",
+    "pages/component/page-meta/page-meta"
   ],
   "window": {
     "backgroundTextStyle": "light",

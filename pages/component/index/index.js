@@ -43,6 +43,10 @@ Page({
         name: '开放能力',
         open: false,
         pages: ['web-view']
+      }, {
+        id: 'page-attr',
+        name: '页面属性配置节点',
+        pages: ['page-meta']
       }
     ],
     theme: 'light'
