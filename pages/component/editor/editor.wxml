@@ -1,0 +1,59 @@
+
+
+<view class="">
+  <view class="page-body">
+    <view class='wrapper'>
+      <editor style="height:77px" id="editor" class="ql-container" placeholder="{{placeholder}}" showImgSize showImgToolbar showImgResize bindstatuschange="onStatusChange"  read-only="{{readOnly}}" bindready="onEditorReady">
+      </editor>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" style="height: 350px;">
+    <button bindtap="blurEditor">blur</button>
+    <button bindtap="clearEditor">清空clear</button>
+    <button bindtap="setColor">设置颜色 red</button>
+    <button bindtap="setBlod">设置bold</button>
+    <button bindtap="setColorGreen">设置绿色</button>
+    <button bindtap="getContents">getContents</button>
+    <button bindtap="getSelectionText">getSelectionText</button>
+    <!-- <button bindtap="insertDivider">insertDivider</button> -->
+    <button bindtap="insertImage">insertImage</button>
+    <button bindtap="insertImageOnline">insertImage online</button>
+    <button bindtap="insertText">insertText</button>
+    <button bindtap="redo">redo</button>
+    <button bindtap="removeFormat">removeFormat</button>
+    <button bindtap="scrollIntoView">scrollIntoView</button>
+    <button bindtap="setContents">setContents</button>
+    <button bindtap="undo">undo</button>
+
+
+    <view>以下是format细节功能</view>
+    <button bindtap="setFormat" data-changename='italic'>italic</button>
+    <button bindtap="setFormat" data-changename='underline'>underline</button>
+    <button bindtap="setFormat" data-changename='strike'>strike</button>
+    <!-- <button bindtap="setFormat" data-changename='ins'>ins</button> -->
+    <button bindtap="setFormat" data-changename='script' data-chanvevalue="sub">script sub</button>
+    <button bindtap="setFormat" data-changename='script' data-chanvevalue="super">script super</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H1">header H1</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H2">header H2</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H3">header H3</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H4">header H4</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H5">header H5</button>
+    <button bindtap="setFormat" data-changename='header' data-chanvevalue="H6">header H6</button>
+    <button bindtap="setFormat" data-changename='align' data-chanvevalue="left">align left</button>
+    <button bindtap="setFormat" data-changename='align' data-chanvevalue="center">align center</button>
+    <button bindtap="setFormat" data-changename='align' data-chanvevalue="right">align right</button>
+    <button bindtap="setFormat" data-changename='align' data-chanvevalue="justify">align justify</button>
+    <button bindtap="setFormat" data-changename='direction' data-chanvevalue="rtl">direction</button>
+    <button bindtap="setFormat" data-changename='indent' data-chanvevalue="+1">indent +1</button>
+    <button bindtap="setFormat" data-changename='indent' data-chanvevalue="-1">indent -1</button>
+    <button bindtap="setFormat" data-changename='list' data-chanvevalue="ordered">list ordered</button>
+    <button bindtap="setFormat" data-changename='list' data-chanvevalue="bullet">list bullet</button>
+    <button bindtap="setColor">设置颜色 red</button>
+    <button bindtap="removeFormat">removeFormat</button>
+
+
+
+
+  </scroll-view>
+  <!-- <button bindtap="complete">完成</button> -->
+</view>
