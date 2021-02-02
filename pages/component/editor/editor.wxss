@@ -29,6 +29,7 @@
   /* border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc; */
   background: #fff;
+  color: #000;
   margin-top: 20px;
   font-size: 16px;
   line-height: 1.5;
