@@ -2,7 +2,7 @@ Page({
   data: {
     formats: {},
     bottom: 0,
-    readOnly: false,
+    readOnly: true,
     placeholder: '开始输入...',
     _focus: false,
   },
@@ -255,5 +255,10 @@ Page({
   setFormat(event) {
     const {changename, chanvevalue=null} = event.target.dataset;
     this.editorCtx.format(changename, chanvevalue);
+  },
+  changeReadOnly() {
+    this.setData({
+      readOnly: !this.data.readOnly
+    })
   }
 })

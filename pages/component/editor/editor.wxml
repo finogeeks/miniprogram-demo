@@ -1,9 +1,16 @@
 
-
 <view class="">
+  <button bindtap="changeReadOnly">change readOnly</button>
   <view class="page-body">
     <view class='wrapper'>
-      <editor style="height:77px" id="editor" class="ql-container" placeholder="{{placeholder}}" showImgSize showImgToolbar showImgResize bindstatuschange="onStatusChange"  read-only="{{readOnly}}" bindready="onEditorReady">
+      <editor 
+      style="height:77px" 
+      id="editor" 
+      class="ql-container" 
+      placeholder="{{placeholder}}" 
+      bindstatuschange="onStatusChange"  
+      read-only="{{readOnly}}" 
+      bindready="onEditorReady">
       </editor>
     </view>
   </view>
