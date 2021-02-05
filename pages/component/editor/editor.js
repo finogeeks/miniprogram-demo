@@ -122,7 +122,7 @@ Page({
   },
   insertImageOnline() {
     this.editorCtx.insertImage({
-      src: 'https://mp.finogeeks.com/img/banner_img_new.4877d96a.png',
+      src: 'https://www-cdn.finclip.com/images/logo.png',
       mode: 'aspectFit',
       
       success(res) {
