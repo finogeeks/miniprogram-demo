@@ -121,6 +121,10 @@ input {
   color: #1aad19;
   font-size: 0;
 }
+.page-foot-tab {
+  margin: 0 auto;
+  width: 76px;
+}
 .icon-foot{
   /* width: 151px;
   height: 12px; */
