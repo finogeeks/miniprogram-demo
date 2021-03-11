@@ -211,7 +211,7 @@ Page({
       if (list[i].id === id) {
         if (list[i].url) {
           wx.navigateTo({
-            url: '/pages/' + list[i].url
+            url: '/packageAPI/pages/' + list[i].url
           })
           return
         }
