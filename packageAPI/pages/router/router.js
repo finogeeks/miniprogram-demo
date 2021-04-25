@@ -1,4 +1,4 @@
-// pages/API/get-network-type/get-network-type.js
+// packageAPI/pages/get-network-type/get-network-type.js
 Page({
   data: {
     result: '',
@@ -15,12 +15,12 @@ Page({
     wx.reLaunch({url: '/pages/API/index/index'})
   },
   redirectTo() {
-    console.log('wx.redirectTo', '/pages/API/buffer/buffer');
-    wx.redirectTo({url: '/pages/API/buffer/buffer'})
+    console.log('wx.redirectTo', '/packageAPI/pages/buffer/buffer');
+    wx.redirectTo({url: '/packageAPI/pages/buffer/buffer'})
   },
   navigateTo() {
-    console.log('wx.navigateTo', '/pages/API/buffer/buffer');
-    wx.navigateTo({url: '/pages/API/buffer/buffer'})
+    console.log('wx.navigateTo', '/packageAPI/pages/buffer/buffer');
+    wx.navigateTo({url: '/packageAPI/pages/buffer/buffer'})
   },
   navigateBack() {
     wx.navigateBack()
