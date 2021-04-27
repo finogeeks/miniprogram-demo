@@ -15,7 +15,7 @@ Page({
     const self = this
     wx.loadFontFace({
       family: this.data.fontFamily,
-      source: 'url("https://nextcloud.finogeeks.club/s/bsospSzDX89cDsk/download")',
+      source: 'url("https://sungd.github.io/Pacifico.ttf")',
       success(res) {
         console.log(res.status)
         self.setData({loaded: true})
