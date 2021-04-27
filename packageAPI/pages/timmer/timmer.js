@@ -12,7 +12,7 @@ Page({
   },
   handleClearTimeout() {
     clearTimeout(this.data.timeout);
-    console.log('clearInterval', this.data.timeout);
+    console.log('clearTimeout', this.data.timeout);
   },
   handleSetInterval() {
     this.handleClearInterval();

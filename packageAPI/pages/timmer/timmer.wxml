@@ -3,12 +3,12 @@
 <import src="../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'getNetworkType'}}"/>
+  <template is="head" data="{{title: '定时器'}}"/>
 
   <view class="page-body">
     <view class="page-section">
-      <view>setInterval 2s 一次随机改变result</view>
-      <view>setTimeout 2s 后随机改变result</view>
+      <view>setInterval 1s 一次随机改变result</view>
+      <view>setTimeout 1s 后随机改变result</view>
       <view>result: {{result}}</view>
       <view class="btn-area">
         <button type="primary" bindtap="handleClearInterval">clearInterval</button>
