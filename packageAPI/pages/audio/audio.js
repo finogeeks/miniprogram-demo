@@ -3,11 +3,13 @@ Page({
   onReady (e) {
     // 使用 wx.createAudioContext 获取 audio 上下文 context
     this.audioCtx = wx.createAudioContext('myAudio')
-    this.audioCtx.setSrc('https://nextcloud.finogeeks.club/s/A2b6ETMFg7TA6Pa/download')
+    this.audioCtx.setSrc('http://www.mvpdj.com/media/attachment/track/201807/20180719_12110657295b5071a9a5f02.mp3')
     this.audioCtx.play()
   },
   data: {
-    src: ''
+    audioCtx: null,
+    name: '此时此刻',
+    src: '',
   },
   audioPlay () {
     this.audioCtx.play()
