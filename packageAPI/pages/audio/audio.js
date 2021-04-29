@@ -3,7 +3,7 @@ Page({
   onReady (e) {
     // 使用 wx.createAudioContext 获取 audio 上下文 context
     this.audioCtx = wx.createAudioContext('myAudio')
-    this.audioCtx.setSrc('http://www.mvpdj.com/media/attachment/track/201807/20180719_12110657295b5071a9a5f02.mp3')
+    this.audioCtx.setSrc('https://www-cdn.finclip.com/audios/test.m4a')
     this.audioCtx.play()
   },
   data: {
