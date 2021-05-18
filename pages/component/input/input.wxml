@@ -2,14 +2,19 @@
 <import src="../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'input'}}"/>
+  <template is="head"
+            data="{{title: 'input'}}" />
 
   <view class="page-body">
-    <view class="page-section">
+    <button bindtap="toggleInputShow">切换展示</button>
+
+    <view wx:if="{{show}}" class="page-section">
       <view class="weui-cells__title">可以自动聚焦的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input" auto-focus placeholder="将会获取焦点"/>
+          <input class="weui-input"
+                 auto-focus
+                 placeholder="将会获取焦点" />
         </view>
       </view>
     </view>
@@ -17,7 +22,9 @@
       <view class="weui-cells__title">控制最大输入长度的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input" maxlength="10" placeholder="最大输入长度为10" />
+          <input class="weui-input"
+                 maxlength="10"
+                 placeholder="最大输入长度为10" />
         </view>
       </view>
     </view>
@@ -25,7 +32,10 @@
       <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input"  maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+          <input class="weui-input"
+                 maxlength="10"
+                 bindinput="bindKeyInput"
+                 placeholder="输入同步到view中" />
         </view>
       </view>
     </view>
@@ -33,7 +43,9 @@
       <view class="weui-cells__title">控制输入的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input"  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+          <input class="weui-input"
+                 bindinput="bindReplaceInput"
+                 placeholder="连续的两个1会变成2" />
         </view>
       </view>
     </view>
@@ -41,7 +53,9 @@
       <view class="weui-cells__title">控制键盘的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input"  bindinput="bindHideKeyboard" placeholder="输入123自动收起键盘" />
+          <input class="weui-input"
+                 bindinput="bindHideKeyboard"
+                 placeholder="输入123自动收起键盘" />
         </view>
       </view>
     </view>
@@ -49,7 +63,9 @@
       <view class="weui-cells__title">数字输入的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input" type="number" placeholder="这是一个数字输入框" />
+          <input class="weui-input"
+                 type="number"
+                 placeholder="这是一个数字输入框" />
         </view>
       </view>
     </view>
@@ -57,7 +73,10 @@
       <view class="weui-cells__title">密码输入的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input" password type="text" placeholder="这是一个密码输入框" />
+          <input class="weui-input"
+                 password
+                 type="text"
+                 placeholder="这是一个密码输入框" />
         </view>
       </view>
     </view>
@@ -82,9 +101,35 @@
       <view class="weui-cells__title">控制占位符颜色的input</view>
       <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell weui-cell_input">
-          <input class="weui-input" placeholder-style="color:#F76260" placeholder="占位符字体是红色的" />
+          <input class="weui-input"
+                 placeholder-style="font-size: 14rpx;color:#F76260"
+                 placeholder="占位符是红色小号字体" />
         </view>
       </view>
+    </view>
+
+    <view bindtap="toggleInputValue">点击输入随机值触发 update</view>
+    <view class="page-section">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input"
+                 focus
+                 value="{{updateValue}}"
+                 bindinput="show"
+                 bindconfirm="show"
+                 maxlength="100" />
+        </view>
+      </view>
+    </view>
+
+
+    <view class="page-section">
+      <view class="weui-cells__title">动态 placeholder</view>
+      <common active="{{active}}">
+        <input class="weui-input border"
+               placeholder-class="{{active ? 'red' : 'blue'}}"
+               placeholder="占位符字体会变化，当前是{{active ? '红' : '蓝'}}色的" />
+      </common>
     </view>
   </view>
 

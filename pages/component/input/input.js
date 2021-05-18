@@ -1,3 +1,5 @@
+
+let timer = null
 Page({
   onShareAppMessage() {
     return {
@@ -7,8 +9,34 @@ Page({
   },
 
   data: {
+    show: true,
     focus: false,
-    inputValue: ''
+    inputValue: '',
+    updateValue: ''
+  },
+
+  onLoad() {
+    timer = setInterval(() => {
+      this.setData({
+        active: !this.data.active
+      })
+    }, 3000)
+  },
+
+  onUnload() {
+    timer && clearInterval(timer)
+  },
+
+  toggleInputShow() {
+    this.setData({
+      show: !this.data.show
+    })
+  },
+
+  toggleInputValue() {
+    this.setData({
+      updateValue: String(Math.random()).slice(0, 12)
+    })
   },
 
   bindKeyInput(e) {

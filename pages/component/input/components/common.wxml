@@ -1,0 +1,12 @@
+<!--pages/component/input/components/common.wxml-->
+<view class="page-section">
+  <view>Components 内的组件</view>
+  <input class="weui-input border"
+               placeholder-style="font-size: {{active ? '20rpx' : '30rpx'}};"
+               placeholder-class="{{active ? 'green' : 'lightpink'}}"
+               placeholder="占位符字体会变化，当前是{{active ? '绿' : '粉'}}色的" />
+
+
+  <view>Components slot 内的组件</view>
+  <slot></slot>
+</view>

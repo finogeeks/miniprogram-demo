@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "input"
+  "navigationBarTitleText": "input",
+  "usingComponents": {
+    "common": "./components/common"
+  }
 }

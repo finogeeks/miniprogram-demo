@@ -1,0 +1,10 @@
+/* pages/component/input/components/common.wxss */
+@import "../../../common/lib/weui.wxss";
+
+.lightpink {
+  color: lightpink;
+}
+
+.green {
+  color: green;
+}

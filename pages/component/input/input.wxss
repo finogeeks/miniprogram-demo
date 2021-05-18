@@ -3,3 +3,13 @@
 .page-section{
   margin-bottom: 10px;
 }
+
+.red {
+  color: red;
+  font-size: 16rpx;
+}
+
+.blue {
+  color: blue;
+  font-size: 24rpx;
+}
