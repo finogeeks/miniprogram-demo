@@ -1,0 +1,83 @@
+<view class="container">
+  <button bindtap="show">切换展示</button>
+  <scroll-view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title first">movable-view区域小于movable-area</view>
+      <movable-area>
+        <movable-view wx:if="{{show}}"
+                      x="{{x}}"
+                      y="{{y}}"
+                      bindhtouchmove="log"
+                      bindvtouchmove="log"
+                      direction="all">text</movable-view>
+      </movable-area>
+    </view>
+    <view class="btn-area">
+      <button bindtap="tap"
+              class="page-body-button"
+              type="primary">点击移动到 (30px, 30px)</button>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">movable-view区域大于movable-area</view>
+      <movable-area>
+        <movable-view class="max"
+                      direction="all">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">只可以横向移动</view>
+      <movable-area>
+        <movable-view direction="horizontal"
+                      bindhtouchmove="log">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">只可以纵向移动</view>
+      <movable-area>
+        <movable-view direction="vertical"
+                      bindvtouchmove="log">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">可超出边界</view>
+      <movable-area>
+        <movable-view direction="all"
+                      out-of-bounds
+                      bindchange="log">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">带有惯性</view>
+      <movable-area>
+        <movable-view direction="all"
+                      friction="7"
+                      inertia>text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">可放缩</view>
+      <movable-area scale-area>
+        <movable-view direction="all"
+                      bindchange="log"
+                      bindscale="log"
+                      scale
+                      scale-min="0.5"
+                      scale-max="4"
+                      scale-value="{{scale}}">text</movable-view>
+      </movable-area>
+    </view>
+
+    <view class="btn-area">
+      <button bindtap="tap2"
+              class="page-body-button"
+              type="primary">点击放大3倍</button>
+    </view>
+  </scroll-view>
+
+</view>
