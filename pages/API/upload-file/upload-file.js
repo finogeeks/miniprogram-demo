@@ -16,10 +16,9 @@ Page({
           },
           success: res => {
             // 返回文件 ID
-            const data = JSON.parse(res.data)
-            console.log('uploadImage success, res is:', data)
+            console.log('uploadImage success, res is:', res)
+            const data = typeof res.data === 'string' ? JSON.parse(res.data) : res.data
             const url = `https://finchat-mop.finogeeks.club/api/v1/mop/netdisk/download/${data.netdiskID}`
-            console.log('uploadImage success, res is:', url)
             self.setData({
               imageSrc: url
             });

@@ -1,7 +1,12 @@
 /* pages/API/download-file/download-file.wxss */
+.page-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .page-body image {
   width: 300px;
   height: 300px;
-
   margin: 0 38px;
 }
