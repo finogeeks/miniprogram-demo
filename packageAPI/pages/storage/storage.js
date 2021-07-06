@@ -12,11 +12,15 @@ Page({
   },
 
   keyChange(e) {
-    this.data.key = e.detail.value
+    this.setData({
+      key: e.detail.value
+    })
   },
 
   dataChange(e) {
-    this.data.data = e.detail.value
+    this.setData({
+      data: e.detail.value
+    })
   },
 
   getStorageSync() {
