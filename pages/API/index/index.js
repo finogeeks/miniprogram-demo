@@ -107,10 +107,10 @@ Page({
           }, {
             zh: '振动',
             url: 'vibrate/vibrate'
-          }, {
-            zh: '手机联系人',
-            url: 'add-contact/add-contact'
           }
+          // }, {
+          //   zh: '手机联系人',
+          //   url: 'add-contact/add-contact'
         ]
       }, {
         id: 'network',

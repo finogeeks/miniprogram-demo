@@ -79,7 +79,7 @@ Page({
 
     // 打开信道
     wx.connectSocket({
-      url: 'wss://echo.websocket.org',
+      url: 'wss://echo.websocket.org/?encoding=text',
     })
   },
 

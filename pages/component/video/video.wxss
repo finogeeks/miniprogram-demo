@@ -1,6 +1,6 @@
 @import "../../common/lib/weui.wxss";
 video {
-  width: 345px;
+  width: 100%;
 }
 
 .weui-cells{
