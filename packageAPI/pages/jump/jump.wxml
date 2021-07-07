@@ -1,0 +1,18 @@
+<!--pages/API/jump/jump.wxml-->
+<import src="../../common/head.wxml" />
+<import src="../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'jump'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="btn-area">
+        <button type="primary" bindtap="exitMiniProgram">exitMiniProgram</button>
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
+

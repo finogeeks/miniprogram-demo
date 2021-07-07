@@ -25,11 +25,15 @@ Page({
       },
       {
         zh: '定时器',
-        url: 'timmer/timmer'
+        url: 'timer/timer'
       },
       {
         zh: '路由',
         url: 'router/router'
+      },
+      {
+        zh: '跳转',
+        url: 'jump/jump'
       }
       ],
     },
