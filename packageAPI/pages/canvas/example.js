@@ -1,5 +1,10 @@
 const example = {}
 
+example.measureText = function (context) {
+  const data = context.measureText('123')
+  console.log(data)
+}
+
 example.rotate = function (context) {
   context.beginPath()
   context.rotate(10 * Math.PI / 180)
