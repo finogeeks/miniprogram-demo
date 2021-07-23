@@ -55,7 +55,7 @@ Page({
         })
         wx.showModal({
           title: '读取数据成功',
-          content: storageData,
+          content: `${storageData}`,
         })
       }
     }
