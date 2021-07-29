@@ -2,7 +2,7 @@ const example = {}
 
 example.measureText = function (context) {
   const data = context.measureText('123')
-  console.log(data)
+  console.log(`width: ${data.width}`)
 }
 
 example.rotate = function (context) {
