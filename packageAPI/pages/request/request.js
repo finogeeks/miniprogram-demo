@@ -1,5 +1,6 @@
 // pages/API/request/request.js
-const requestUrl = require('../../../config/index').requestUrl
+const config = require('../../../config/index')
+const requestUrl = config.requestUrl
 
 const duration = 2000
 
