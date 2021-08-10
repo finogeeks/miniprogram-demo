@@ -1,0 +1,45 @@
+<!--index.ftml-->
+<view class="container">
+  <view><button type="default" bindtap="click1">跳转到Api</button></view>
+  <view><button type="default" bindtap="onResize">屏幕宽度</button></view>
+  <match-media width="375">
+    <button type="primary">宽度等于375时显示</button>
+  </match-media>
+  <match-media min-width="375">
+    <button type="primary">宽度大于375时显示</button>
+  </match-media>
+  <match-media min-width="360">
+    <button type="primary">宽度大于360时显示</button>
+  </match-media>
+  <match-media max-width="380">
+    <button type="primary">宽度小于380时显示</button>
+  </match-media>
+  <match-media min-width="375" max-width="380">
+    <button type="primary">宽度大于375并且小于380时显示</button>
+  </match-media>
+  <match-media height="842">
+    <button type="primary">高度等于842时显示(不包含导航栏和状态栏)</button>
+  </match-media>
+  <match-media min-height="570">
+    <button type="primary">高度大于570时显示</button>
+  </match-media>
+  <match-media max-height="680">
+    <button type="primary">高度小于680时显示</button>
+  </match-media>
+  <match-media max-height="780">
+    <button type="primary">高度小于780时显示</button>
+  </match-media>
+  <view>可爱爱</view>
+  <button type="primary">一直显示1</button>
+  <match-media max-height="380">
+    <button type="primary">高度小于380时显示</button>
+  </match-media>
+  <button type="primary">一直显示2</button>
+  <match-media orientation="landscape">
+    <button type="primary">横屏时显示</button>
+  </match-media>
+  <match-media orientation="portrait">
+    <button type="primary">竖屏时显示</button>
+  </match-media>
+  <button type="primary">一直显示</button>
+</view>

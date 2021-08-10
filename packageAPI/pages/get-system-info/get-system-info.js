@@ -17,6 +17,7 @@ Page({
     const that = this;
     try {
       const res = wx.getSystemInfoSync()
+      console.log(res)
       console.log(res.model)
       console.log(res.pixelRatio)
       console.log(res.windowWidth)

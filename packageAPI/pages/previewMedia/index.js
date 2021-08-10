@@ -104,5 +104,20 @@ Page({
         console.log(res)
       }
     })
-  }
+  },
+  previewImage() {
+    wx.previewImage({
+      urls: [
+        'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1830914723,3154965800&fm=26&gp=0.jpg',
+        'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg',
+      ],
+      showmenu: true
+    })
+  },
+  previewVideo() {
+    wx.previewVideo({
+      url: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/homeSite/video/%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.mp4',
+      autoplay: false
+    })
+  },
 })

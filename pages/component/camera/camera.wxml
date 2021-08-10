@@ -1,0 +1,52 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <camera 
+    mode="normal"
+    resolution="medium" 
+    z-index="100" 
+    flash="{{flash}}"
+    device-position="{{devicePosition}}"
+    bindinitdone="bindinitdone" 
+    bindstop="bindstop"
+    binderror="binderror"
+    bindscancode="bindscancode"
+    style="width: 50%; height: 300px;">
+
+    </camera>
+    <cover-view style="background: red; position: absolute;top: 100px;width: 100%;">
+      asdasd
+    </cover-view>
+
+ 
+    <view class="btn-area">
+      <button type="primary" bindtap="takePhoto1">拍照</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="startRecord">开始录像</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="stopRecord">结束录像</button>
+    </view>
+
+    <view>更新闪光灯模式</view>
+   <radio-group bindchange='bindchangeflash'>
+   <radio value="auto" >auto</radio>
+   <radio value="on" checked>on</radio>
+  <radio value="off">off</radio>
+  <radio value="torch">torch</radio>
+  </radio-group>
+       
+  <view>更新摄像头朝向</view>
+  <radio-group bindchange='cchangedevicePosition'>
+  <radio value="back" checked>back</radio>
+  <radio value="front" >front</radio>
+  </radio-group>
+
+    <view class="preview-tips">预览</view>
+    <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+    <video wx:if="{{videoSrc}}" class="video" src="{{videoSrc}}"></video>
+
+  </view>
+
+  <view><button bindtap="saveVedio">保存文件</button></view>
+</view>

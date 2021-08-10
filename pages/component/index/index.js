@@ -12,7 +12,7 @@ Page({
         id: 'view',
         name: '视图容器',
         open: false,
-        pages: ['view', 'scroll-view', 'swiper']
+        pages: ['view', 'scroll-view', 'swiper', 'match-media', 'movable', 'cover-view']
       }, {
         id: 'content',
         name: '基础内容',
@@ -32,7 +32,7 @@ Page({
         id: 'media',
         name: '媒体组件',
         open: false,
-        pages: ['image', 'video']
+        pages: ['image', 'video', 'camera']
       }, {
         id: 'canvas',
         name: '画布',

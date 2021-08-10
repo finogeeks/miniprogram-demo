@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="page-body" style="padding: 40px 0;">
+
+  <!-- relative -->
+  <cover-view class="relative">
+    <cover-view class="container" style="overflow: scroll;height: 400rpx">
+        relative 定位, 内部可滚动（实机可，开发工具不可）
+      <cover-view class="flex"  bindtap="onParentClick" style="height: 300vh;">
+        <cover-view class="flex-item text-1">文案1</cover-view>
+        <cover-view class="flex-item text-2" bindtap="onClick">文案2可点击</cover-view>
+        <cover-view class="flex-item text-3">超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3</cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+
+  <!-- absolute 定位 -->
+  <cover-view class="absolute">
+    <cover-view class="container">
+        absolute 定位
+      <cover-view class="flex">
+        <cover-view class="flex-item text-1">文案1</cover-view>
+        <cover-view class="flex-item text-2">文案2</cover-view>
+        <cover-view class="flex-item text-3">文案3</cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+
+  <!-- fixed 定位 -->
+  <cover-view class="fixed">
+    <cover-view class="container">
+        fixed 定位
+      <cover-view class="flex">
+        <cover-view class="flex-item text-1">文案1</cover-view>
+        <cover-view class="flex-item text-2">文案2</cover-view>
+        <cover-view class="flex-item text-3">超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3超长文案3</cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+
+  <!-- transform -->
+  <cover-view class="transform">
+    <cover-view class="content">
+      transform 200 * 200
+    </cover-view>
+  </cover-view>
+
+
+  <!-- animate -->
+  <cover-view class="animate">
+    <cover-view class="content {{className}}">
+      animate
+    </cover-view>
+  </cover-view>
+
+  <cover-view>
+    <cover-image src="https://img01.jituwang.com/201103/170742-201103210P292.jpg"></cover-image>
+    <cover-image style="width: 600rpx;height: 600rpx;" src="./images/1.png"></cover-image>
+    <cover-image style="width: 600rpx;height: 600rpx;" src="./images/2.gif"></cover-image>
+    <cover-image style="width: 600rpx;height: 600rpx;" src="./images/3.jpg"></cover-image>
+    <cover-image style="width: 600rpx;height: 600rpx;" src="./images/4.webp"></cover-image>
+    <cover-image style="width: 600rpx;height: 600rpx;" src="https://media.missguided.com/s/missguided/O1448014_set/1/stone-longline-nylon-mac.webp?$category-page__grid--1x$%27"></cover-image>
+  </cover-view>
+</view>

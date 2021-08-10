@@ -1,0 +1,9 @@
+
+
+<view>
+  <view>
+    点击【eventChannel emit testevent】按钮触发上一页面testevent事件
+  </view>
+  <button bindtap="eventchannelemit">eventChannel emit testevent</button>
+
+</view>

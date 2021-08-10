@@ -1,0 +1,8 @@
+/* pages/writefile/index.wxss */
+
+.title {
+  padding: 10rpx 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+}

@@ -5,7 +5,7 @@
 <view class="container">
   <template is="head" data="{{title: 'audio'}}"/>
   <view>
-    <audio name="{{name}}" src="{{src}}" id="myAudio" controls ></audio>
+    <audio name="{{name}}" src="{{src}}" id="myAudio" controls poster="./xuwei.jpg"></audio>
 
     <button type="primary" bindtap="audioPlay">播放</button>
     <button type="primary" bindtap="audioPause">暂停</button>

@@ -31,7 +31,9 @@
     "pages/component/video/video",
     "pages/component/movable/movable",
     "pages/component/doc-web-view/doc-web-view",
-    "pages/component/page-meta/page-meta"
+    "pages/component/page-meta/page-meta",
+    "pages/component/camera/camera",
+    "pages/component/cover-view/cover-view"
   ],
   "subpackages": [
     {
@@ -74,7 +76,14 @@
         "pages/upload-file/upload-file",
         "pages/voice/voice",
         "pages/previewMedia/index",
-        "pages/getSelectedTextRange/index"
+        "pages/getSelectedTextRange/index",
+        "pages/fileToBase64/index",
+        "pages/innerAudioContext/index",
+        "pages/recorderManager/index",
+        "pages/FileSystemManager/writefile",
+        "pages/EventChannel/firstpage/index",
+        "pages/EventChannel/secondpage/index",
+        "pages/Accelerometer/index"
       ]
     }
   ],

@@ -1,0 +1,5 @@
+<!--components/title/index.wxml-->
+<map>
+  <view>
+  <slot></slot></view>
+</map>

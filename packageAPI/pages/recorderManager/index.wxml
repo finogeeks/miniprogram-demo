@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<view>
+<view>recorderManager</view>
+<button bindtap="start">start</button>
+<button bindtap="resume">resume</button>
+<button bindtap="pause">pause</button>
+<button bindtap="stop">stop</button>
+
+<view>tempFilePath:{{tempFilePath}}</view>
+<button bindtap='play'>play</button>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/index/index.wxml-->
+<view>
+  <view>innerAudioContext</view>
+<button bindtap="play">play</button>
+<!-- <button bindtap="rate">rate</button> -->
+<button bindtap="pause">pause</button>
+<button bindtap="stop">stop</button>
+<button bindtap="seek">seek</button>
+<view>
+  volume:
+<slider max='1' min='0' value='{{volume}}' step='0.1' show-value bindchange='handleVolumeChange'></slider>
+</view>
+<view>
+  rate:
+<slider max='2' min='0.5' value='{{rate}}' step='0.1' show-value bindchange='handleRateChange'></slider>
+</view>
+<button bindtap="destroy">destroy</button>
+</view>

@@ -1,0 +1,7 @@
+
+<view>
+  <button bindtap="emitstartAccelerometer">startAccelerometer</button>
+  <button bindtap="emitstopAccelerometer">stopAccelerometer</button>
+  <button bindtap="emitonAccelerometerChange">onAccelerometerChange</button>
+  <button bindtap="emitoffAccelerometerChange">offAccelerometerChange</button>
+</view>

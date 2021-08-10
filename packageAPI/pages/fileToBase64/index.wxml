@@ -1,0 +1,7 @@
+<view>
+  <button bindtap="downtrnas" data-url="https://www-cdn.finclip.com/images/logo.png">image</button>
+
+  <button bindtap="downtrnas" data-url="https://mp32.9ku.com/upload/128/2020/05/22/1004523.mp3">audio</button>
+
+  <button bindtap="downtrnas" data-url="https://vd3.bdstatic.com/mda-jgepmfmgjneifnyu/sc/mda-jgepmfmgjneifnyu.mp4?v_from_s=gz_videoui_4135&auth_key=1613963095-0-0-c41a503e270982b1ef8cab6f5d4514fa&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=">video</button>
+</view>

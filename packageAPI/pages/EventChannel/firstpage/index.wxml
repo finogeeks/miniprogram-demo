@@ -1,0 +1,8 @@
+
+
+<view>
+  <view>
+    跳转页面，再在新页面触发当前页testevent事件。触发后5s执行EventChannel.off注销事件
+  </view>
+  <button bindtap="gotoDebugpage">go to debugpage</button>
+</view>

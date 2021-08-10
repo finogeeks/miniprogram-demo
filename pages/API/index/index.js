@@ -159,12 +159,24 @@ Page({
             url: 'load-font-face/load-font-face'
           },
           {
-            zh: 'previewMedia',
+            zh: 'preview媒体预览',
             url: 'previewMedia/index'
           },
           {
             zh: 'getSelectedTextRange',
             url: 'getSelectedTextRange/index'
+          },
+          {
+            zh: 'fileToBase64',
+            url: 'fileToBase64/index'
+          },
+          {
+            zh: 'innerAudioContext',
+            url: 'innerAudioContext/index'
+          },
+          {
+            zh: 'recorderManager',
+            url: 'recorderManager/index'
           }
         ]
       }, {
@@ -196,6 +208,33 @@ Page({
           //   zh: 'getRealtimeLogManager',
           //   url: 'getRealtimeLogManager/index'
           // }
+        ],
+      }, {
+        id: 'route',
+        name: '路由',
+        pages: [
+          {
+            zh: 'EventChannel',
+            url: 'EventChannel/firstpage/index'
+          }
+        ],
+      }, {
+        id: 'file',
+        name: '文件',
+        pages: [
+          {
+            zh: 'FileSystemManager',
+            url: 'FileSystemManager/writefile'
+          }
+        ],
+      }, {
+        id: 'Accelerometer',
+        name: '加速计',
+        pages: [
+          {
+            zh: 'Accelerometer',
+            url: 'Accelerometer/index'
+          }
         ],
       }
     ],

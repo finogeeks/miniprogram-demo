@@ -1,0 +1,87 @@
+/**index.wxss**/
+
+.page-body {
+  height: 800vh;
+  background-color: antiquewhite;
+}
+
+.relative {
+  height: 400rpx;
+  margin-bottom: 120rpx;
+  background: lightblue;
+}
+
+.fixed {
+  background: greenyellow;
+  position: fixed;
+  bottom: 0;
+}
+
+.absolute {
+  background: linear-gradient(#e66465, #9198e5);
+  position: absolute;
+  top: calc(60vh);
+  left: calc(50% - 300rpx);
+}
+
+.scroll-view {
+  position: relative;
+  height: 50vh;
+  margin-top: 40vh;
+  overflow: scroll;
+  background-color: lightcoral;
+}
+
+.flex {
+  display:flex;
+}
+
+.flex-item{
+  width: 200rpx;
+  height: 200rpx;
+  font-size: 26rpx;
+}
+
+.text-1 {
+  background-color: lightsteelblue;
+}
+
+.text-2 {
+  background-color: lightseagreen;
+}
+
+.text-3 {
+  background-color: lightpink;
+}
+
+
+.transform {
+  height: 400rpx;
+  margin-bottom: 120rpx;
+  background-color: lightsalmon;
+}
+
+.transform .content{
+  height: 200rpx;
+  width: 200rpx;
+  transform: rotate(20deg) translate(120rpx, 70rpx) scale(1.5);
+  background-color: lightskyblue;
+}
+
+.animate {
+  height: 400rpx;
+  margin-bottom: 120rpx;
+  background-color: lightcyan;
+  transition: rotate 2s linear;
+}
+
+.animate .content {
+  height: 200rpx;
+  width: 200rpx;
+  background-color: lightskyblue;
+  transition: transform 4s linear;
+}
+
+.animate .content.active {
+  transform: rotate(20deg) translate(120rpx, 70rpx) scale(1.5);
+}
