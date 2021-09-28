@@ -89,12 +89,22 @@ Page({
   },
 
   saveVedio(){
-    wx.saveVideoToPhotosAlbum({
-      filePath: 'https://dn-odum9helk.qbox.me/spjc/1.mp4',
-      success(res){
-        console.log('http路径保存',res)
+    wx.downloadFile({
+      url: 'https://dn-odum9helk.qbox.me/spjc/1.mp4',
+      success(res) {
+        console.log('下载视频成功')
+        wx.saveVideoToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success(res){
+            console.log('http路径保存',res)
+          }
+        })
+      },
+      fail(res) {
+        console.log('下载视频失败', res)
       }
     })
+    
   },
 
   cchangedevicePosition(e){
