@@ -1,5 +1,7 @@
 <view class="container">
-  <button bindtap="show">切换展示</button>
+  <view>
+    <button bindtap="show">切换展示</button>
+  </view>
   <scroll-view class="page-body">
     <view class="page-section">
       <view class="page-section-title first">movable-view区域小于movable-area</view>
