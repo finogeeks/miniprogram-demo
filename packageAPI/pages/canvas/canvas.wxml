@@ -2,16 +2,47 @@
 <import src="../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'createContext'}}"/>
-  <view>本demo使用官方文档中的CanvasContext的调用方式</view>
+  <template is="head"
+            data="{{title: 'createContext'}}" />
   <view class="page-body">
     <view class="page-section">
-      <canvas class="canvas-element" canvas-id="canvas"></canvas>
-      <scroll-view class="canvas-buttons" scroll-y="true">
-        <button class="canvas-button" bindtap="toTempFilePath">toTempFilePath</button>
-        <block wx:for="{{methods}}" wx:for-item="method">
-          <button class="canvas-button" bindtap="{{method}}" >{{method}}</button>
-        </block>
+      <!-- 旧 canvas 写法 -->
+      <canvas class="canvas-element"
+              style="border: 1rpx solid green;"
+              disable-scroll="{{true}}"
+              bindtouchstart="log1"
+              bindtouchmove="log1"
+              bindtouchend="log1"
+              bindtouchcancel="log1"
+              bindlongtap="log1"
+              binderror="log1"
+              canvas-id="canvas1"></canvas>
+      <!-- 新 canvas 写法 -->
+      <canvas native
+              class="canvas-element"
+              style="border: 1rpx solid rosybrown;"
+              id="canvas2"
+              disable-scroll="{{true}}"
+              bindtouchstart="log2"
+              bindtouchmove="log2"
+              bindtouchend="log2"
+              bindtouchcancel="log2"
+              bindlongtap="log2"
+              binderror="log2"
+              type="2d"></canvas>
+      <scroll-view class="canvas-buttons"
+                   scroll-y="true">
+        <view class="canvas-button-box">
+          <button class="canvas-button"
+                  bindtap="toTempFilePath">toTempFilePath</button>
+          <button class="canvas-button"
+                  bindtap="imageData">imageData</button>
+          <block wx:for="{{methods}}"
+                 wx:for-item="method">
+            <button class="canvas-button"
+                    bindtap="{{method}}">{{method}}</button>
+          </block>
+        </view>
       </scroll-view>
     </view>
   </view>
