@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"> 
-    <strong>Let APP get the ability to run Mini-Program quickly</strong>
+    <strong>Let APP get the ability to run Mini-App quickly</strong>
 <p>
 
 <p align="center"> 
@@ -36,14 +36,14 @@
 
 ## 🤔 What is FinClip?
 
-Have you ever **thought** that the developed WeChat mini program can be put in your own APP to run directly, and you only need to develop the mini program once, and then you can open it in different applications, isn't it incredible?
+Have you ever **thought** that the developed WeChat Mini-App can be put in your own APP to run directly, and you only need to develop the Mini-App once, and then you can open it in different applications, isn't it incredible?
 
-Have you ever **tried** to introduce an SDK in your own APP, and you can not only open the mini program in the app, but also customize the mini program interface and modify the mini program style, don't you think it is more incredible?
+Have you ever **tried** to introduce an SDK in your own APP, and you can not only open the Mini-App in the app, but also customize the Mini-App interface and modify the Mini-App style, don't you think it is more incredible?
 
 **This is FinClip, with much INCREDIBLE !**
 
 ## 🎁 Origin of the name
-FinClip = Finogeeks + Clips, which is developed by the team of Finogeeks Technoplogy Co., Ltd. "Fin" is the abbreviation of the company's name `Finogeeks`, and Clip comes from the `App Clip` concept proposed by Apple in WWDC 2020. By combining the two, we hope to help developers provide a simple, easy-to-use mini program container framework, so that every app can have the ability to run mini programs.
+FinClip = Finogeeks + Clips, which is developed by the team of Finogeeks Technoplogy Co., Ltd. "Fin" is the abbreviation of the company's name `Finogeeks`, and Clip comes from the `App Clip` concept proposed by Apple in WWDC 2020. By combining the two, we hope to help developers provide a simple, easy-to-use Mini-App container framework, so that every app can have the ability to run Mini-App.
 
 ## 📱 Compatible Environments
 FinClip support the following third-party frameworks on which you can build.
