@@ -28,7 +28,7 @@
 
 <div align="center">
 
-[Home Page](https://www.finclip.com/) | [Example Mini Programs](https://www.finclip.com/#/market) | [Documentation](https://www.finclip.com/mop/document/) | [Deployment Guide](https://www.finclip.com/mop/document/introduce/quickStart/cloud-server-deployment-guide.html) <br> [SDK Integration Guide](https://www.finclip.com/mop/document/introduce/quickStart/intergration-guide.html) | [API List](https://www.finclip.com/mop/document/develop/api/overview.html) | [Component List](https://www.finclip.com/mop/document/develop/component/overview.html) | [Privacy Commitment](https://www.finclip.com/mop/document/operate/safety.html)
+[Home Page](https://www.finclip.com/) | [Example Mini-App](https://www.finclip.com/#/market) | [Documentation](https://www.finclip.com/mop/document/) | [Deployment Guide](https://www.finclip.com/mop/document/introduce/quickStart/cloud-server-deployment-guide.html) <br> [SDK Integration Guide](https://www.finclip.com/mop/document/introduce/quickStart/intergration-guide.html) | [API List](https://www.finclip.com/mop/document/develop/api/overview.html) | [Component List](https://www.finclip.com/mop/document/develop/component/overview.html) | [Privacy Commitment](https://www.finclip.com/mop/document/operate/safety.html)
 
 </div>
 
@@ -43,7 +43,7 @@ Have you ever **tried** to introduce an SDK in your own APP, and you can not onl
 **This is FinClip, with much INCREDIBLE !**
 
 ## 🎁 Origin of the name
-FinClip = Finogeeks + Clips, which is developed by the team of Finogeeks Technoplogy Co., Ltd. "Fin" is the abbreviation of the company's name `Finogeeks`, and Clip comes from the `App Clip` concept proposed by Apple in WWDC 2020. By combining the two, we hope to help developers provide a simple, easy-to-use mini program container framework, so that every app can have the ability to run mini programs.
+FinClip = Finogeeks + Clips, which is developed by the team of Finogeeks Technoplogy Co., Ltd. "Fin" is the abbreviation of the company's name `Finogeeks`, and Clip comes from the `App Clip` concept proposed by Apple in WWDC 2020. By combining the two, we hope to help developers provide a simple, easy-to-use Mini-App container framework, so that every app can have the ability to run Mini-App.
 
 ## 📱 Compatible Environments
 FinClip support the following third-party frameworks on which you can build.
@@ -62,11 +62,11 @@ We have also designed proprietary development tools [FIDE](https://www.finclip.c
 ## 🍎 Quick Experience
 With just these three steps, you can quickly experience **the incredible FinClip**!
 
-1. Develop a WeChat mini program, or just use our pre-written sample code（ [iOS DEMO](https://github.com/finogeeks/finclip-ios-demo) | [Android DEMO](https://github.com/finogeeks/finclip-android-demo) | [Flutter DEMO](https://github.com/finogeeks/finclip-flutter-demo) ）
+1. Develop a WeChat Mini-App, or just use our pre-written sample code（ [iOS DEMO](https://github.com/finogeeks/finclip-ios-demo) | [Android DEMO](https://github.com/finogeeks/finclip-android-demo) | [Flutter DEMO](https://github.com/finogeeks/finclip-flutter-demo) ）
 2. Refer to the [SDK Integration Guide](https://www.finclip.com/mop/document/introduce/quickStart/intergration-guide.html), to integrate the FinClip SDK into your own APP
-3. Refer to the [Operation Guidelines](https://www.finclip.com/mop/document/introduce/accessGuide/enterprise-guidelines.html), log in to the [FinClip.com](https://www.finclip.com?from=github), and complete the association of the application with the mini program.
+3. Refer to the [Operation Guidelines](https://www.finclip.com/mop/document/introduce/accessGuide/enterprise-guidelines.html), log in to the [FinClip.com](https://www.finclip.com?from=github), and complete the association of the application with the Mini-App.
 
-Then, witness the miracle and see how the mini program works directly in your own APP!
+Then, witness the miracle and see how the Mini-App works directly in your own APP!
 
 ## 📦 Deployment
 We offer a community version of our service for you to experience locally, and the difference in features between the different versions of FinClip can be found in [here](https://www.finclip.com/#/quotation).
@@ -78,7 +78,7 @@ We offer a community version of our service for you to experience locally, and t
 The following is information on common questions and guidelines for your development and experience with FinClip
 
 - [Home Page](https://www.finclip.com/#/home)
-- [Example Mini Programs](https://www.finclip.com/#/market)
+- [Example Mini-App](https://www.finclip.com/#/market)
 - [Documentation](https://www.finclip.com/mop/document/)
 - [SDK Integration Guide](https://www.finclip.com/mop/document/introduce/quickStart/intergration-guide.html)
 - [Structure of FinClip](https://www.finclip.com/mop/document/develop/guide/structure.html)
