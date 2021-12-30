@@ -76,6 +76,7 @@
       <view class="btn-area">
         <button type="primary" bindtap="getSystemInfo">获取手机系统信息</button>
         <button type="primary" bindtap="getSystemInfoSync">同步获取手机系统信息</button>
+        <button type="primary" bindtap="getSystemInfoAsync">异步获取手机系统信息getSystemInfoAsync</button>
         <button bindtap="clearInfo">清空</button>
       </view>
     </view>

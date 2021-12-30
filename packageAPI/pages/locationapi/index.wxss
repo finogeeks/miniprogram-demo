@@ -1,0 +1,34 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.item{
+  border-bottom: 1px solid #dddddd;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+
+.key-change{
+  display: flex;
+  padding: 7rpx;
+}
+.key-change input{
+  border: 1px solid #abcdef;
+  flex-grow: 1;
+}

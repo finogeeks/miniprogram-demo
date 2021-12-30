@@ -1,0 +1,24 @@
+<view>
+    <view>
+    地图1   id: abcdef1
+    </view>
+    <map id="abcdef1"></map>
+    <view>
+    地图2   id: abcdef2 (只传latitude)
+    </view>
+    <map id="abcdef2" latitude="22.53332"></map>
+    <view>
+    地图3   id: abcdef3  (只传longitude)
+    </view>
+    <map id="abcdef3" longitude="113.93041"></map>
+    <view>
+    地图4   id: abcdef4
+    </view>
+    <map id="abcdef4"></map>
+
+    <button data-mapid="1" bindtap="emitaddmarkers">地图1 addMarkers</button>
+    <button data-mapid="1" bindtap="emitgetcenterlocation">地图1 getCenterLocation</button>
+    <button data-mapid="2" bindtap="emitaddmarkers">地图2 addMarkers</button>
+    <button data-mapid="3" bindtap="emitaddmarkers">地图3 addMarkers</button>
+    <button data-mapid="4" bindtap="emitaddmarkers">地图4 addMarkers</button>
+</view>

@@ -1,0 +1,58 @@
+.my-map{
+  width: 100%;
+  height: 200px;
+}
+.change-item{
+  display: flex;
+  border-bottom: 1px solid #4caf50;
+  padding: 5px;
+}
+.change-item2{
+  padding: 5px;
+  border-bottom: 1px solid #4caf50;
+}
+.change-input{
+  border: 1px solid #03e3ff;
+  display: inline-block;
+  border-radius: 5px;
+  width: 100%;
+}
+.label{
+  margin-right: 5px;
+  font-size: 40rpx;
+  color: deeppink;
+}
+.tabs{
+  display: flex;
+  white-space: nowrap;
+}
+.tab{
+  /* border: 1px solid #4caf50; */
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #3875FF;
+  color: #3875FF;
+  width: auto;
+  display: inline-block;
+}
+.tab.choosen{
+  background: #3875FF;
+  color: #ffffff;
+}
+.btn{
+  width: 100%!important;
+}
+scroll-view{
+  padding-bottom: 100rpx;
+}
+.my-picker{
+  color: #795548;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.callout1{
+  background-color: #03e3ff;
+  color: #ffffff;
+}

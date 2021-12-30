@@ -190,6 +190,9 @@ Page({
           }, {
             zh: '使用原生地图选择位置',
             url: 'choose-location/choose-location'
+          }, {
+            zh: 'locationapi',
+            url: 'locationapi/index'
           }
         ]
       }, {
@@ -234,6 +237,24 @@ Page({
           {
             zh: 'Accelerometer',
             url: 'Accelerometer/index'
+          }
+        ],
+      }, {
+        id: 'encryption',
+        name: '加密',
+        pages: [
+          {
+            zh: 'getRandomValues',
+            url: 'getRandomValues/getRandomValues'
+          }
+        ],
+      }, {
+        id: 'checkIsOpenAccessibility',
+        name: '无障碍',
+        pages: [
+          {
+            zh: 'checkIsOpenAccessibility',
+            url: 'checkIsOpenAccessibility/index'
           }
         ],
       }

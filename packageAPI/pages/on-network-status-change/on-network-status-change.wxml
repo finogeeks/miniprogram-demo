@@ -16,6 +16,10 @@
           <text class="page-body-text-network-type">{{networkType}}</text>
         </block>
       </view>
+      <view>
+        <button type="primary" bindtap="offNetworkStatusChange">停止网络状态监听offNetworkStatusChange</button>
+        <button type="primary" bindtap="onNetworkStatusChange">开始网络状态监听onNetworkStatusChange</button>
+      </view>
     </view>
   </view>
 
