@@ -4,7 +4,7 @@
 		<block wx:for="{{contacts}}" wx:key="id" wx:for-item="contact">
 			<view class="contact" bindtap="showNext" data-idx="{{index}}">
 				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === index}}">
-					<image style="width: 40px;" mode="widthFix" src="../images/{{contact.img}}"></image>
+					<image style="width: 40px;" mode="widthFix" src="/image/{{contact.img}}"></image>
 				</share-element>
 				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === index}}">
 					{{contact.name}}
@@ -35,7 +35,7 @@
 	<view class="screen screen2">
 		<view class="contact">
 			<share-element class="avatar" duration="{{duration}}" key="avatar" transform>
-				<image style="width: 40px;" mode="widthFix" src="../images/{{contact.img}}" />
+				<image style="width: 40px;" mode="widthFix" src="/image/{{contact.img}}" />
 			</share-element>
 			<share-element class="name" key="name" duration="{{duration}}" transform>
 				{{contact.name}}
