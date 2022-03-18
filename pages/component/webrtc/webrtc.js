@@ -103,7 +103,7 @@ Page({
     })
     const servers = { iceServers: [{ urls: "stun:stun.stunprotocol.org" }] }
     const mediaConstraints = { optional: [{ RtpDataChannels: true }] }
-    pc1 = wx.webrtc.createRTCPeerConnection(servers, mediaConstraints)
+    pc1 = await wx.webrtc.createRTCPeerConnection(servers, mediaConstraints)
     console.log('pc1', pc1.id)
     pc1.addEventListener('icecandidate', e => {
       console.log('DEBUG: listener-callback ---- icecandidate', e)
@@ -133,11 +133,11 @@ Page({
     pc1.addEventListener('track', e => {
       console.log('DEBUG: listener-callback ---- ontrack', e)
       this.setData({
-        remoteStreamId: e.streamId
+        remoteStreamId: e.streams[0].streamId
       })
     })
 
-    const tracks = stream.getTracks()
+    const tracks = await stream.getTracks()
     console.log('tracks: ', tracks)
     tracks.forEach(t => {
       pc1.addTrack(t)
