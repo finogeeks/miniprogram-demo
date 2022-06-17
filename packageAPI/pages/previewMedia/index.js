@@ -67,19 +67,19 @@ Page({
     wx.previewMedia({
       sources: [
         {
-          url: typeof url === 'string' ? url : 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1830914723,3154965800&fm=26&gp=0.jpg',
+          url: typeof url === 'string' ? url : 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/304-400x400.jpeg',
           type: 'image',
-          poster: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg'
+          poster: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg'
         },
         {
-          url: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg',
+          url: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg',
           type: 'image',
-          poster: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg'
+          poster: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg'
         },
         {
           url: 'https://dn-odum9helk.qbox.me/spjc/1.mp4',
           type: 'video',
-          poster: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg'
+          poster: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg'
         }
       ],
       success(res) {
@@ -95,7 +95,7 @@ Page({
   },
   previewMedialocal: function() {
     wx.getImageInfo({
-      src: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1078861629,3747050294&fm=26&gp=0.jpg',
+      src: 'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg',
       success: (res)=> {
         console.log(res)
         this.previewMedia(res.path)
@@ -108,8 +108,8 @@ Page({
   previewImage() {
     wx.previewImage({
       urls: [
-        'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1830914723,3154965800&fm=26&gp=0.jpg',
-        'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1091405991,859863778&fm=26&gp=0.jpg',
+        'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/304-400x400.jpeg',
+        'https://public-1251849568.cos.ap-guangzhou.myqcloud.com/temp/1071-400x600.jpeg',
       ],
       showmenu: true
     })
