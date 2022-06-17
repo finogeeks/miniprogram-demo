@@ -43,8 +43,8 @@
   </radio-group>
 
     <view class="preview-tips">预览</view>
-    <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
     <video wx:if="{{videoSrc}}" class="video" src="{{videoSrc}}"></video>
+    <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
 
   </view>
 
