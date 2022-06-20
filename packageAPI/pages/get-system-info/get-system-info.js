@@ -32,6 +32,21 @@ Page({
       // Do something when catch error
     }
   },
+  getSystemInfoAsync () {
+    const that = this;
+    console.log('getSystemInfoAsync start')
+    wx.getSystemInfoAsync({
+      success(res) {
+        that.setData({
+          systemInfo: res
+        })
+      },
+      complete (res) {
+        console.log('getSystemInfoAsync complete: ', res)
+      }
+    })
+    console.log('getSystemInfoAsync end')
+  },
   clearInfo() {
     this.setData({
       systemInfo: {}

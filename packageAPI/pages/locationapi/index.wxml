@@ -1,0 +1,59 @@
+<view>
+  <view>
+  输入框规则与map组件的一致，可以输入json串解析成各种类型的数据，no不传参
+  </view>
+
+  <view class="item">
+    <view class="key-change">
+      latitude: <input type="text" value="{{openLocation_latitude}}" bindinput="valueChange" data-changekey="openLocation_latitude" />
+    </view>
+    <view class="key-change">
+      longitude: <input type="text" value="{{openLocation_longitude}}" bindinput="valueChange" data-changekey="openLocation_longitude" />
+    </view>
+    <view class="key-change">
+      scale: <input type="text" value="{{openLocation_scale}}" bindinput="valueChange" data-changekey="openLocation_scale" />
+    </view>
+    <view class="key-change">
+      name: <input type="text" value="{{openLocation_name}}" bindinput="valueChange" data-changekey="openLocation_name" />
+    </view>
+    <view class="key-change">
+      address: <input type="text" value="{{openLocation_address}}" bindinput="valueChange" data-changekey="openLocation_address" />
+    </view>
+    <button bindtap="emitopenLocation" type="primary">openLocation</button>
+  </view>
+
+
+  <view class="item">
+    <view class="key-change">
+      type: <input type="text" value="{{getLocation_type}}" bindinput="valueChange" data-changekey="getLocation_type" />
+    </view>
+    <view class="key-change">
+      altitude: <input type="text" value="{{getLocation_altitude}}" bindinput="valueChange" data-changekey="getLocation_altitude" />
+    </view>
+    <view class="key-change">
+      isHighAccuracy: <input type="text" value="{{getLocation_isHighAccuracy}}" bindinput="valueChange" data-changekey="getLocation_isHighAccuracy" />
+    </view>
+    <view class="key-change">
+      highAccuracyExpireTime: <input type="text" value="{{getLocation_highAccuracyExpireTime}}" bindinput="valueChange" data-changekey="getLocation_highAccuracyExpireTime" />
+    </view>
+    <button bindtap="emitgetLocation" type="primary">getLocation</button>
+  </view>
+
+
+  <view class="item">
+    <button bindtap="emitchoosePoi" type="primary">choosePoi</button>
+  </view>
+
+  <view class="item">
+    <view class="key-change">
+      latitude: <input type="text" value="{{chooseLocation_latitude}}" bindinput="valueChange" data-changekey="chooseLocation_latitude" />
+    </view>
+    <view class="key-change">
+      longitude: <input type="text" value="{{chooseLocation_longitude}}" bindinput="valueChange" data-changekey="chooseLocation_longitude" />
+    </view>
+    <button bindtap="emitchooseLocation" type="primary">chooseLocation</button>
+  </view>
+
+
+
+</view>

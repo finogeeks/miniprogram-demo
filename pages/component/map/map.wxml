@@ -1,0 +1,1061 @@
+<view>
+  <map
+    style="border-radius: 10px"
+    wx:if="{{mapShow}}"
+    map="{{maptypes[maptype]}}"
+    id="maplearn"
+    class="my-map"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}"
+    scale="{{scale}}"
+    min-scale="{{minScale}}"
+    max-scale="{{maxScale}}"
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+    circles="{{circles}}"
+    controls="{{controls}}"
+    include-points="{{includePoints}}"
+    show-location="{{showLocation}}"
+    polygons="{{polygons}}"
+    rotate="{{rotate}}"
+    skew="{{skew}}"
+    enable-3D="{{enable3D}}"
+    show-compass="{{showCompass}}"
+    show-scale="{{showScale}}"
+    enable-overlooking="{{enableOverlooking}}"
+    enable-zoom="{{enableZoom}}"
+    enable-scroll="{{enableScroll}}"
+    enable-rotate="{{enableRotate}}"
+    enable-satellite="{{enableSatellite}}"
+    enable-traffic="{{enableTraffic}}"
+    enable-poi="{{enablePoi}}"
+    enable-building="{{enableBuilding}}"
+    setting="{{setting}}"
+    bindtap="bindtapHandler"
+    bindmarkertap="bindmarkertapHandler"
+    bindlabeltap="bindlabeltapHandler"
+    bindcontroltap="bindcontroltapHandler"
+    bindcallouttap="bindcallouttapHandler"
+    bindupdated="bindupdatedHandler"
+    bindregionchange="bindregionchangeHandler"
+    bindpoitap="bindpoitapHandler"
+    bindanchorpointtap="bindanchorpointtapHandler"
+    >
+    <cover-view slot="callout">
+      <cover-view class="callout1" marker-id="1">marker 1 customcallout</cover-view>
+      <cover-view marker-id="2">marker 2 customcallout</cover-view>
+    </cover-view>
+    </map>
+  <view>
+    <scroll-view slot="callout" class="tabs" scroll-x="true" style="width: 100%;padding:0">
+      <view class="tab {{showingSence==='latlong' ? 'choosen' : ''}}" data-sencetype="latlong" bindtap="switchType">
+        经纬、缩放、角度
+      </view>
+      <view class="tab {{showingSence==='layers' ? 'choosen' : ''}}" data-sencetype="layers" bindtap="switchType">
+        图形、线条
+      </view>
+      <view class="tab {{showingSence==='control' ? 'choosen' : ''}}" data-sencetype="control" bindtap="switchType">
+        控制属性
+      </view>
+      <view class="tab {{showingSence==='markers' ? 'choosen' : ''}}" data-sencetype="markers" bindtap="switchType">
+        markers
+      </view>
+      <view class="tab {{showingSence==='others' ? 'choosen' : ''}}" data-sencetype="others" bindtap="switchType">
+        其他参数及api
+      </view>
+    </scroll-view>
+
+    <view style="display: flex;border: 1px solid #757577">
+      <button bindtap="resetData">参数重置</button>
+      数字类型: {{toNumber}}
+      <switch color="#3875FF" checked="{{toNumber}}" bindchange="switchtoNumber"></switch>
+    </view>
+
+    <view wx:if="{{showingSence==='latlong'}}">
+      <scroll-view
+        style="height: {{controlAreaHeight}};border: 1px solid #4caf50;box-sizing: border-box;"
+        scroll-y="true"
+        >
+        <view class="change-item2">
+          <view>
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="maptype" value="{{maptype}}" range="{{maptypes}}">
+              <view class="picker">
+                选择maptype: {{maptypes[maptype]}}
+              </view>
+            </picker>
+          </view>
+        </view>
+        <!-- <button bindtap="testundefined">testundefined</button> -->
+        <view class="change-item2">
+          <text class="label">latitude : {{latitude}} </text>
+          <!-- <view >说明：按照json格式解析，</view> -->
+          <view>
+            <input class="change-input" type="text" value="{{editingLatitude}}" data-attribute="latitude" data-orginalattribute="editingLatitude" data-defaultnum="true" bindinput="attributeKeyChange"/>
+            <!-- <input class="change-input" type="text" value="{{latlong}}" bindinput="latlongChange" placeholder="[lat,long]"/> -->
+          </view>
+        </view>
+        <view class="change-item2">
+          <text class="label">longitude : {{longitude}} </text>
+          <!-- <view >说明：按照json格式解析，</view> -->
+          <view>
+            <input class="change-input" type="text" value="{{editingLongitude}}" data-attribute="longitude" data-orginalattribute="editingLongitude" data-defaultnum="true" bindinput="attributeKeyChange"/>
+            <!-- <input class="change-input" type="text" value="{{latlong}}" bindinput="latlongChange" placeholder="[lat,long]"/> -->
+          </view>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitGetCenterLocation">getCenterLocation</button>
+        </view>
+        <view class="change-item2">
+          <view>
+            <button class="btn" bindtap="chooseLocalImage">获取tmp地址</button>
+            <button class="btn" bindtap="getstorepath">获取store地址（先点击获取tmp地址）</button>
+            <button class="btn" bindtap="getusrpath">获取usr地址（先点击获取tmp地址、ide不支持）</button>
+          </view>
+          <view>
+            markerIconPath: （输入no不传）<input class="change-input" type="text" value="{{markerIconPath}}" data-attribute="markerIconPath" bindinput="changeInputValue" placeholder="图标路径"/>
+          </view>
+          <button class="btn" bindtap="emitSetLocMarkerIcon">setLocMarkerIcon</button>
+        </view>
+        <view class="change-item2">
+          <view>说明：赋值no不传参</view>
+          <view>
+            经度： <input type="text" class="change-input"  value="{{editingLongitude}}" data-attribute="movetolocation_longitude" data-defaultnum="true" bindinput="changeInputValue" />
+          </view>
+          <view>
+            纬度： <input type="text" class="change-input" value="{{editingLatitude}}" data-attribute="movetolocation_latitude" data-defaultnum="true" bindinput="changeInputValue" />
+          </view>
+          <button class="btn" bindtap="emitMoveToLocation">moveToLocation</button>
+        </view>
+        <view class="change-item2">
+          <view>说明：支持对象、数字、字符串、数字</view>
+          <view>
+            <text class="label">scale:</text>
+            <input class="change-input" type="text" value="{{editingScale}}" data-attribute="scale" data-orginalattribute="editingScale" data-defaultnum="true" bindinput="attributeKeyChange"/>
+          </view>
+          <view>
+            <text class="label">minScale:</text>
+            <input class="change-input" type="text" value="{{editingMinscale}}" data-attribute="minScale" data-orginalattribute="editingMinscale" data-defaultnum="true" bindinput="attributeKeyChange"/>
+          </view>
+          <view>
+            <text class="label">maxScale:</text>
+            <input class="change-input" type="text" value="{{editingMaxscale}}" data-attribute="maxScale" data-orginalattribute="editingMaxscale" data-defaultnum="true" bindinput="attributeKeyChange" />
+          </view>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitApi" data-apiname="getScale">getScale</button>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitApi" data-apiname="getRegion">getRegion</button>
+        </view>
+        <view class="change-item2">
+          <view>
+            centerOffset:
+            <view>offset 说明：赋值no不传参; 按照json格式解析 </view>
+            <input class="change-input" type="text" value="{{editingcenterOffset}}" placeholder="[0.5,0.5]" data-attribute="centerOffset" bindinput="changeInputValue"/>
+          </view>
+          <button class="btn" bindtap="emitSetCenterOffset">setCenterOffset</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">rotate:{{rotate}}</text>
+          <view>说明：支持对象、数字、字符串、数字</view>
+          <input class="change-input" type="text" value="{{editingrotate}}" placeholder="rotate" data-attribute="rotate" data-orginalattribute="editingrotate" data-defaultnum="true" bindinput="attributeKeyChange"/>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitApi" data-apiname="getRotate">getRotate</button>
+        </view>
+        <view class="change-item">
+          <text class="label">skew:</text>
+          <input class="change-input" type="text" value="{{editingskew}}" placeholder="skew" data-attribute="skew" data-orginalattribute="editingskew" data-defaultnum="true" bindinput="attributeKeyChange"/>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitApi" data-apiname="getSkew">getSkew</button>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view wx:if="{{showingSence==='layers'}}">
+      <scroll-view
+        style="height: {{controlAreaHeight}};border: 1px solid #4caf50;box-sizing: border-box;"
+        scroll-y="true"
+        >
+        <view class="change-item2">
+          <text class="label">controls:</text>
+          <view>
+            id: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  placeholder="例如1、2、3、4"  
+                  value="{{controls_id}}" data-attribute="controls_id" bindinput="changeInputValue"
+                  ></input>
+          </view>
+          <view>
+            <view>position</view>
+            <view>
+            说明： 赋值no不传参; {} => {} ; [] => [] ; '' => '' ; null => null
+            </view>
+            <textarea maxlength="-1" style="height: 110px" 
+                    class="change-input" 
+                    type="text" 
+                    value="{{controls_position}}" data-attribute="controls_position" bindinput="changeInputValue"
+                    placeholder='position'/>
+          </view>
+          <view>
+            iconPath: 
+            <view>说明：赋值no不传参  ；  测试其他路径可以点击上方按钮【获取tmp地址】</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{controls_iconPath}}" data-attribute="controls_iconPath" bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            <view>clickable</view>
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="controls_clickable" value="{{controls_clickable}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[controls_clickable]}}
+              </view>
+            </picker>
+          </view>
+          <button class="btn" bindtap="addControls">添加controls</button>
+          <button class="btn" bindtap="consoleControls">打印controls到下面的输入框</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">controls:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea 
+                  maxlength="-1" 
+                  style="height: 110px" 
+                  class="change-input" 
+                  type="text" 
+                  value="{{editingControls}}" 
+                  data-attribute="editingControls" 
+                  bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <button class="btn" bindtap="changeControls">修改controls</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">polyline:</text>
+          <view>
+            <view>
+              points: 说明：可验证字符串、数组、对象类型
+            </view>
+            <view>
+              <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{polyline_points}}" data-attribute="polyline_points" bindinput="changeInputValue" placeholder='controls'/>
+            </view>
+          </view>
+          <view>
+            color: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_color}}"  
+                  data-attribute="polyline_color" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            colorList: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_colorList}}"  
+                  data-attribute="polyline_colorList" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            <view>dottedLine</view>
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="polyline_dottedLine" value="{{polyline_dottedLine}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[polyline_dottedLine]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            arrowIconPath: 
+            <view>说明：赋值no不传参 ; 可以点击上方按钮【获取tmp地址】</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_arrowIconPath}}"  
+                  data-attribute="polyline_arrowIconPath" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            width: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_width}}"  
+                  data-attribute="polyline_width" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            <view>arrowLine</view>
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="polyline_arrowLine" value="{{polyline_arrowLine}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[polyline_arrowLine]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            borderColor: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_borderColor}}"  
+                  data-attribute="polyline_borderColor" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            borderWidth: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_borderWidth}}"  
+                  data-attribute="polyline_borderWidth" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            level: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polyline_level}}"  
+                  data-attribute="polyline_level" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="addPolyline">添加polyline</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">polyline:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{editingPolyline}}" data-attribute="editingPolyline" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <button class="btn" bindtap="changePolyline">修改polyline</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">circles:</text>
+          <view>
+            latitude: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_latitude}}"  
+                  data-attribute="circle_latitude" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            longitude: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_longitude}}"  
+                  data-attribute="circle_longitude" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            color: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_color}}"  
+                  data-attribute="circle_color" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            fillColor: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_fillColor}}"  
+                  data-attribute="circle_fillColor" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            radius: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_radius}}"  
+                  data-attribute="circle_radius" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            strokeWidth: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_strokeWidth}}"  
+                  data-attribute="circle_strokeWidth" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            level: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{circle_level}}"  
+                  data-attribute="circle_level" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="addCircles">添加circles</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">circles:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{editingCircles}}" data-attribute="editingCircles" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <button class="btn" bindtap="changeCircles">改变circles</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">polygons:</text>
+          <view>
+            points: 
+            <view>说明：赋值no不传参</view>
+            <textarea type="text" 
+                  maxlength="-1" style="height: 110px;"
+                  class="change-input" 
+                  value="{{polygons_points}}"  
+                  data-attribute="polygons_points" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></textarea>
+          </view>
+          <view>
+            strokeWidth: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polygons_strokeWidth}}"  
+                  data-attribute="polygons_strokeWidth" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            strokeColor: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polygons_strokeColor}}"  
+                  data-attribute="polygons_strokeColor" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            fillColor: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polygons_fillColor}}"  
+                  data-attribute="polygons_fillColor" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            zIndex: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polygons_zIndex}}"  
+                  data-attribute="polygons_zIndex" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            level: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{polygons_level}}"  
+                  data-attribute="polygons_level" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="addPolygons">添加polygons</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">polygons:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{editingPolygons}}" data-attribute="editingPolygons" bindinput="changeInputValue" placeholder='editingPolygons  注意：修改为非数组时，点击添加polygons会报错'/>
+          </view>
+          <button class="btn" bindtap="changePolygons">改变polygons</button>
+        </view>
+      </scroll-view>
+    </view>
+    
+    <view wx:if="{{showingSence==='control'}}">
+      <scroll-view
+        style="height: {{controlAreaHeight}};border: 1px solid #4caf50;box-sizing: border-box;"
+        scroll-y="true"
+        >
+        <view class="change-item2">
+          <view>show-location: {{showLocation}}</view>
+          <switch color="#3875FF" checked="{{showLocation}}" data-attribute="showLocation" bindchange="changeAttribute" ></switch>
+        </view>
+        <view class="change-item2">
+          <view>
+            enableZoom: {{enableZoom}}
+          </view>
+          <view>
+            <switch color="#3875FF" checked="{{enableZoom}}" data-attribute="enableZoom" bindchange="changeAttribute"></switch>
+          </view>
+        </view>
+        <view class="change-item2">
+          <view>enableRotate: {{enableRotate}}</view>
+          <switch color="#3875FF" checked="{{enableRotate}}" data-attribute="enableRotate" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enable3D: {{enable3D}}
+          <switch color="#3875FF" checked="{{enable3D}}" data-attribute="enable3D" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          showCompass: {{showCompass}}
+          <switch color="#3875FF" checked="{{showCompass}}" data-attribute="showCompass" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          showScale: {{showScale}}
+          <switch color="#3875FF" checked="{{showScale}}" data-attribute="showScale" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enableOverlooking: {{enableOverlooking}}
+          <switch color="#3875FF" checked="{{enableOverlooking}}" data-attribute="enableOverlooking" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enableScroll: {{enableScroll}}
+          <switch color="#3875FF" checked="{{enableScroll}}" data-attribute="enableScroll" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enableSatellite: {{enableSatellite}}
+          <switch color="#3875FF" checked="{{enableSatellite}}" data-attribute="enableSatellite" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enableTraffic: {{enableTraffic}}
+          <switch color="#3875FF" checked="{{enableTraffic}}" data-attribute="enableTraffic" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enablePoi: {{enablePoi}}
+          <switch color="#3875FF" checked="{{enablePoi}}" data-attribute="enablePoi" bindchange="changeAttribute"></switch>
+        </view>
+        <view class="change-item2">
+          enableBuilding: {{enableBuilding}}
+          <switch color="#3875FF" checked="{{enableBuilding}}" data-attribute="enableBuilding" bindchange="changeAttribute"></switch>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view wx:if="{{showingSence==='markers'}}">
+      <scroll-view
+        style="height: {{controlAreaHeight}};border: 1px solid #4caf50;box-sizing: border-box;"
+        scroll-y="true"
+        >
+        <view class="change-item2">
+          <view>
+            markerId: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{translatemarkerMarkerid}}"  
+                  data-attribute="translatemarkerMarkerid" 
+                  bindinput="changeInputValue"
+                  placeholder="例如1、2、3、4"  
+                  ></input>
+          </view>
+          <view>
+            autoRotate:
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="translatemarker_marker_autoRotate" value="{{translatemarker_marker_autoRotate}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[translatemarker_marker_autoRotate]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            rotate:
+            <view>说明：赋值no不传参</view>
+            <input type="text" class="change-input" value="{{translatemarker_rotate}}"  data-attribute="translatemarker_rotate" bindchange="changeInputValue" />
+          </view>
+          <view>
+            duration:
+            <view>说明：赋值no不传参</view>
+            <input type="text" class="change-input" placeholder="毫秒" value="{{translatemarker_duration}}" data-attribute="translatemarker_duration" bindchange="changeInputValue" />
+          </view>
+          <view>
+            moveWithRotate:
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="translatemarker_marker_moveWithRotate" value="{{translatemarker_marker_moveWithRotate}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[translatemarker_marker_moveWithRotate]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            destination:
+          </view>
+          <view>
+            说明：赋值no不传参
+          </view>
+          <input class="change-input" type="text" value="{{translatemarker_destination}}" data-attribute="translatemarker_destination" bindchange="changeInputValue" placeholder='{"latitude":11,"longitude":22}'/>
+          <button class="btn" bindtap="emitTranslateMarker">translateMarker</button>
+        </view>
+        <view class="change-item2">
+          <view class="label">moveAlong1</view>
+          <view>
+            markerId: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{moveAlongMarkerid}}"  
+                  data-attribute="moveAlongMarkerid" 
+                  bindinput="changeInputValue"
+                  placeholder="例如1、2、3、4"  
+                  ></input>
+          </view>
+          <view>
+            autoRotate:
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="moveAlong_autoRotate" value="{{moveAlong_autoRotate}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[moveAlong_autoRotate]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            duration:
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  placeholder="毫秒" 
+                  value="{{moveAlong_duration}}"  
+                  data-attribute="moveAlong_duration" 
+                  bindinput="changeInputValue"
+                  />
+          </view>
+          <view>
+            path:
+          </view>
+          <view>
+            说明： {} => {} ; [] => [] ; '' => '' ; null => null
+          </view>
+          <textarea maxlength="-1" style="height: 110px" 
+                class="change-input" 
+                type="text" 
+                value="{{moveAlong_path}}" 
+                data-attribute="moveAlong_path" 
+                bindinput="changeInputValue"
+                placeholder='path'/>
+          <button class="btn" bindtap="emitMoveAlong">moveAlong</button>
+        </view>
+        <view class="change-item2">
+          <view class="label">moveAlong2</view>
+          <view>
+            markerId2: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{moveAlong2Markerid}}"  
+                  data-attribute="moveAlong2Markerid" 
+                  bindinput="changeInputValue"
+                  placeholder="例如1、2、3、4"  
+                  ></input>
+          </view>
+          <view>
+            autoRotate2:
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="moveAlong2_autoRotate" value="{{moveAlong2_autoRotate}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[moveAlong2_autoRotate]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            duration2:
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  placeholder="毫秒" 
+                  value="{{moveAlong2_duration}}"  
+                  data-attribute="moveAlong2_duration" 
+                  bindinput="changeInputValue"
+                  />
+          </view>
+          <view>
+            path2:
+          </view>
+          <view>
+            说明： {} => {} ; [] => [] ; '' => '' ; null => null
+          </view>
+          <textarea maxlength="-1" style="height: 110px" 
+                class="change-input" 
+                type="text" 
+                value="{{moveAlong2_path}}" 
+                data-attribute="moveAlong2_path" 
+                bindinput="changeInputValue"
+                placeholder='path'/>
+          <button class="btn" bindtap="emitMoveAlong2">moveAlong2</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">markers:</text>
+          <view>
+            id: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_id}}"  
+                  data-attribute="markers_id" 
+                  bindinput="changeInputValue"
+                  placeholder="建议从5开始"  
+                  ></input>
+          </view>
+          <view>
+            latitude: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_latitude}}"  
+                  data-attribute="markers_latitude" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            longitude: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_longitude}}"  
+                  data-attribute="markers_longitude" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            joinCluster: {{markers_joinCluster}}
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="markers_joinCluster" value="{{markers_joinCluster}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[markers_joinCluster]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            title: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_title}}"  
+                  data-attribute="markers_title" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            zIndex: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_zIndex}}"  
+                  data-attribute="markers_zIndex" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            iconPath: 
+            <view>说明：赋值no不传参 ； 可点击[获取tmp地址]</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_iconPath}}"  
+                  data-attribute="markers_iconPath" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            rotate: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_rotate}}"  
+                  data-attribute="markers_rotate" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            alpha: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_alpha}}"  
+                  data-attribute="markers_alpha" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            width: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_width}}"  
+                  data-attribute="markers_width" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            height: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_height}}"  
+                  data-attribute="markers_height" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <view>
+            callout: 
+            <view>说明：赋值no不传参</view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{markers_callout}}" data-attribute="markers_callout" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <view>
+            customCallout: 
+            <view>说明：赋值no不传参</view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{markers_customCallout}}" data-attribute="markers_customCallout" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <view>
+            label: 
+            <view>说明：赋值no不传参</view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{markers_label}}" data-attribute="markers_label" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <view>
+            anchor: 
+            <view>说明：赋值no不传参</view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{markers_anchor}}" data-attribute="markers_anchor" bindinput="changeInputValue" placeholder='controls'/>
+          </view>
+          <view>
+            aria-label: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{markers_arialabel}}"  
+                  data-attribute="markers_arialabel" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="addMarker">添加marker</button>
+          <view>
+            addmarkers-clear: {{addmarkers_clear}}
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="addmarkers_clear" value="{{addmarkers_clear}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[addmarkers_clear]}}
+              </view>
+            </picker>
+          </view>
+          <button class="btn" bindtap="emitAddMarkers">【API】addMarkers (只能新增一个)</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">addmarkers:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{addmarkers_markers}}" data-attribute="addmarkers_markers" bindinput="changeInputValue" placeholder='eidtingSetting'/>
+          </view>
+          <view>
+            addmarkers-clear: {{addmarkers_clear}}
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="addmarkers_clear" value="{{addmarkers_clear}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[addmarkers_clear]}}
+              </view>
+            </picker>
+          </view>
+          <button class="btn" bindtap="emitAddMarkers2">【API】addMarkers (新增多个)</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">markers:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{editingMarkers}}" data-attribute="editingMarkers" bindinput="changeInputValue" placeholder='eidtingSetting'/>
+          </view>
+          <button class="btn" bindtap="changeMarker">修改marker</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">removeMarkers:</text>
+          <view>
+            markerIds: 
+            <view>说明：赋值no不传参</view>
+            <input type="text" 
+                  class="change-input" 
+                  value="{{removemarker_markerIds}}"  
+                  data-attribute="removemarker_markerIds" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="emitRemoveMarkers">removeMarkers</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">initMarkerCluster:</text>
+          <view>
+            enableDefaultStyle: {{initmarkercluster_enableDefaultStyle}}
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="initmarkercluster_enableDefaultStyle" value="{{initmarkercluster_enableDefaultStyle}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[initmarkercluster_enableDefaultStyle]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            zoomOnClick: {{initmarkercluster_zoomOnClick}}
+            <picker class="my-picker" bindchange="attributePickerChange" data-attribute="initmarkercluster_zoomOnClick" value="{{initmarkercluster_zoomOnClick}}" range="{{booleanArray}}">
+              <view class="picker">
+                点击选择(选no不传) -> {{booleanArray[initmarkercluster_zoomOnClick]}}
+              </view>
+            </picker>
+          </view>
+          <view>
+            gridSize: {{initmarkercluster_gridSize}}
+            <input type="text" 
+                  class="change-input" 
+                  value="{{initmarkercluster_gridSize}}"  
+                  data-attribute="initmarkercluster_gridSize" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></input>
+          </view>
+          <button class="btn" bindtap="emitInitMarkerCluster">initMarkerCluster</button>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view wx:if="{{showingSence==='others'}}">
+      <scroll-view
+        style="height: {{controlAreaHeight}};border: 1px solid #4caf50;box-sizing: border-box;"
+        scroll-y="true"
+        >
+        <view class="change-item2">
+          <text class="label">includePoints:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{editingIncludePoints}}" data-attribute="editingIncludePoints" bindinput="changeInputValue" placeholder='editingIncludePoints'/>
+          </view>
+          <button class="btn" bindtap="changeIncludePoints">改变includePoints</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">includePoints:</text>
+          <view>
+            points: 
+            <view>说明：赋值no不传参</view>
+            <textarea type="text" 
+                  maxlength="-1" style="height: 110px"
+                  class="change-input" 
+                  value="{{includePoints_points}}"  
+                  data-attribute="includePoints_points" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></textarea>
+          </view>
+          <view>
+            padding: 
+            <view>说明：赋值no不传参</view>
+            <textarea type="text" 
+                  maxlength="-1"
+                  class="change-input" 
+                  value="{{includePoints_padding}}"  
+                  data-attribute="includePoints_padding" 
+                  bindinput="changeInputValue"
+                  placeholder=""  
+                  ></textarea>
+          </view>
+          <button class="btn" bindtap="emitIncludePoints">[API]includePoints</button>
+        </view>
+        <view class="change-item2">
+          <view>
+            经度： <input type="text" class="change-input"  value="{{editingLongitude}}"  
+                          data-attribute="openmapapp_longitude" 
+                          bindinput="changeInputValue"
+                          />
+          </view>
+          <view>
+            纬度： <input type="text" class="change-input" value="{{editingLatitude}}" 
+                          data-attribute="openmapapp_latitude" 
+                          bindinput="changeInputValue"
+                          />
+          </view>
+          <view>
+            目的地： <input type="text" class="change-input" value="{{openmapapp_destination}}" 
+                          data-attribute="openmapapp_destination" 
+                          bindinput="changeInputValue"
+                          />
+          </view>
+          <button class="btn" bindtap="emitOpenMapApp">openMapApp</button>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitApi" data-apiname="toScreenLocation">toScreenLocation</button>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitFromScreenLocation">fromScreenLocation</button>
+        </view>
+        <view class="change-item2">
+          <button class="btn" bindtap="emitOn">on</button>
+        </view>
+        <view class="change-item2">
+          <text class="label">setting:</text>
+          <view>
+            说明：可验证字符串、数组、对象类型
+          </view>
+          <view>
+            <textarea maxlength="-1" style="height: 110px" class="change-input" type="text" value="{{eidtingSetting}}" data-attribute="eidtingSetting" bindinput="changeInputValue" placeholder='eidtingSetting'/>
+          </view>
+          <button class="btn" bindtap="changeSetting" >修改 setting </button>
+        </view>
+      </scroll-view>
+    </view>
+
+  </view>
+</view>

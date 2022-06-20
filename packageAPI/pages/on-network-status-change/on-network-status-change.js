@@ -12,12 +12,13 @@ Page({
   },
   onLoad() {
     const that = this
-    wx.onNetworkStatusChange(function (res) {
-      that.setData({
-        isConnected: res.isConnected,
-        networkType: res.networkType
-      })
-    })
+    this.onNetworkStatusChange()
+    // wx.onNetworkStatusChange(function (res) {
+    //   that.setData({
+    //     isConnected: res.isConnected,
+    //     networkType: res.networkType
+    //   })
+    // })
   },
   onShow() {
     const that = this
@@ -29,5 +30,17 @@ Page({
         })
       }
     })
+  },
+  networkstatuschangehandler (res) {
+    this.setData({
+      isConnected: res.isConnected,
+      networkType: res.networkType
+    })
+  },
+  onNetworkStatusChange () {
+    wx.onNetworkStatusChange(this.networkstatuschangehandler)
+  },
+  offNetworkStatusChange () {
+    wx.offNetworkStatusChange(this.networkstatuschangehandler)
   }
 })

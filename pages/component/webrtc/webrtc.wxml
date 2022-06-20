@@ -1,0 +1,28 @@
+<view>
+
+
+  <view>id:{{connectId}}</view>
+  <view><input type="text" placeholder="对方id" value="{{toId}}" bindinput="tuIdChange" /></view>
+  <button bindtap="startSocket">建立socket</button>
+  <button bindtap="startWebrtc">start webrtc</button>
+  <button bindtap="makeCall">call</button>
+  <button bindtap="webrtcshow">show</button>
+  <button bindtap="newalocalRecord">创建本地录制</button>
+  <button bindtap="startLocalRecord">开始本地录制</button>
+  <button bindtap="stopLocalRecord">停止本地录制</button>
+
+
+  <view wx:if="{{showwebrtc}}">
+    <view>local:</view>
+    <webrtc-video muted class="my-webrtc-video" id="localwebrtcvideo" src="webrtc://{{localStreamId}}"></webrtc-video>
+    <!-- <webrtc-audio muted id="localwebrtcvideo" src="webrtc://{{localStreamId}}"></webrtc-audio> -->
+    <view>remote:</view>
+    <webrtc-video class="my-webrtc-video" id="remotewebrtcvideo" src="webrtc://{{remoteStreamId}}"></webrtc-video>
+    <!-- <webrtc-audio id="remotewebrtcvideo" src="webrtc://{{remoteStreamId}}"></webrtc-audio> -->
+    <view>录制：</view>
+    <video src="{{recordFile}}"></video>
+  </view>
+
+
+
+</view>

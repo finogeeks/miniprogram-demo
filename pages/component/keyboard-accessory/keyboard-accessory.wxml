@@ -1,0 +1,36 @@
+<view>
+
+  <input type="text" value="{{position}}" 
+        bindinput="positionchange" 
+        placeholder="keyboard-accessory的position" 
+        bindkeyboardheightchange="kbheightchange"
+        bindfocus="kbfocus"
+        bindblur="kbblur"
+        />
+
+  <input style="margin-top: 100px;" placeholder="input" bindfocus="focus1" bindblur="blur1" hold-keyboard>
+    <keyboard-accessory position="{{position}}" style="height: 250px;width: 150px;padding-left: 40px;">
+      <cover-view bindtap="tap" style="flex: 1; width: 50px; background: green;width: 30px; height: 150px;">
+        <cover-view style="width: 30px; height: 30px; background: blue;color: cornsilk;">click</cover-view>
+      </cover-view>
+      <cover-image bindtap="tap" src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" style="flex: 1; width: 50px;height: 150px; background: red;">
+      </cover-image>
+    </keyboard-accessory>
+  </input>
+
+  <textarea hold-keyboard="{{true}}" style="margin-top: 200px;" placeholder="textarea1" bindfocus="focus2" bindblur="blur2" cursor-spacing="70">
+    <keyboard-accessory position="{{position}}" class="container" style="height: 50px;width: 500px;">
+      <cover-view bindtap="tap" style="flex: 1; width: 50px; background: green;">textarea1</cover-view>
+      <cover-view bindtap="tap" style="flex: 1; width: 50px; background: red;">2</cover-view>
+    </keyboard-accessory>
+  </textarea>
+
+  <view>测试update。 以下输入框的内容将会作为keyboard-accessory的style属性。 匹配position改变position值。 例如：height: 66px;position:44;</view>
+  <textarea value="{{kbastyle}}" hold-keyboard="{{true}}" placeholder="keyboard-accessary组件update事件" bindfocus="focus2" bindblur="blur2" bindinput="textareainput">
+    <keyboard-accessory position="{{position}}" class="container" style="{{kbastyle}}">
+      <cover-view bindtap="tap" style="flex: 1; width: 50px; background: green;">textarea1</cover-view>
+      <cover-view bindtap="tap" style="flex: 1; width: 50px; background: red;">2</cover-view>
+    </keyboard-accessory>
+  </textarea>
+
+</view>

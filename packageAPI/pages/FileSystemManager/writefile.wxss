@@ -1,8 +1,6 @@
-/* pages/writefile/index.wxss */
-
-.title {
-  padding: 10rpx 20rpx;
-  font-size: 30rpx;
-  font-weight: bold;
-  text-align: center;
+/* pages/file-2/index.wxss */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 300rpx;
 }

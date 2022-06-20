@@ -2,32 +2,35 @@
 <import src="../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'canvas'}}"/>
+  <template is="head"
+            data="{{title: 'canvas'}}" />
 
   <view class="page-body">
     <view class="page-section page-section-gap">
       <view class="page-section-title">绘制</view>
       <view class="body-view">
-        <canvas canvas-id="canvas" class="canvas"></canvas>
+        <canvas canvas-id="canvas"
+                class="canvas"></canvas>
       </view>
     </view>
 
     <view class="page-section page-section-gap">
       <view class="page-section-title">绘制图片</view>
       <view class="body-view">
-        <canvas canvas-id="canvas2" class="canvas"></canvas>
+        <canvas canvas-id="canvas2"
+                class="canvas"></canvas>
       </view>
     </view>
 
     <view class="page-section page-section-gap">
       <view class="page-section-title">绘制图片-高清</view>
       <view class="body-view">
-        <canvas canvas-id="canvas3" class="canvas" hidpi></canvas>
+        <canvas canvas-id="canvas3"
+                class="canvas"
+                hidpi></canvas>
       </view>
     </view>
   </view>
 
   <template is="foot" />
 </view>
-
-

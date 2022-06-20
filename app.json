@@ -32,8 +32,14 @@
     "pages/component/movable/movable",
     "pages/component/doc-web-view/doc-web-view",
     "pages/component/page-meta/page-meta",
+    "pages/component/map/map",
+    "pages/component/multiple-map/multiple-map",
+    "pages/component/keyboard-accessory/keyboard-accessory",
     "pages/component/camera/camera",
-    "pages/component/cover-view/cover-view"
+    "pages/component/cover-view/cover-view",
+    "pages/component/webrtc/webrtc",
+    "pages/component/page-container/page-container",
+    "pages/component/share-element/share-element"
   ],
   "subpackages": [
     {
@@ -83,7 +89,10 @@
         "pages/FileSystemManager/writefile",
         "pages/EventChannel/firstpage/index",
         "pages/EventChannel/secondpage/index",
-        "pages/Accelerometer/index"
+        "pages/Accelerometer/index",
+        "pages/getRandomValues/getRandomValues",
+        "pages/checkIsOpenAccessibility/index",
+        "pages/locationapi/index"
       ]
     }
   ],

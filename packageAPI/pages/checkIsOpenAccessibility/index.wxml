@@ -1,0 +1,6 @@
+<view>
+  <view>
+    无障碍功能开启状态:  {{status}}
+  </view>
+  <button type="primary" bindtap="checkIsOpenAccessibility">checkIsOpenAccessibility</button>
+</view>
