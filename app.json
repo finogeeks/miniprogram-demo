@@ -69,7 +69,6 @@
         "pages/image/image",
         "pages/load-font-face/load-font-face",
         "pages/video/video",
-        "pages/audio/audio",
         "pages/storage/storage",
         "pages/animation/animation",
         "pages/menu-info/menu-info",
