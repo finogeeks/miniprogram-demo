@@ -143,10 +143,11 @@ Page({
           {
             zh: '图片',
             url: 'image/image'
-          }, {
-            zh: '音频',
-            url: 'audio/audio'
-          },
+          }, 
+          // {
+          //   zh: '音频',
+          //   url: 'audio/audio'
+          // },
           // {
           //   zh: '录音',
           //   url: 'voice/voice'
@@ -171,7 +172,7 @@ Page({
             url: 'fileToBase64/index'
           },
           {
-            zh: 'innerAudioContext',
+            zh: '音频',
             url: 'innerAudioContext/index'
           },
           {
